@@ -30,7 +30,9 @@
   </head>
 
   <body>
+    <!------------------------- header--------------------------------->
     <header>
+      <!------------------------- navbar--------------------------------->
       <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
           <a class="navbar-brand imgLogo" href="#"
@@ -75,7 +77,9 @@
         </div>
       </nav>
     </header>
+    <!-- Main -->
     <main>
+      <!------------------------- carousel--------------------------------->
       <section>
         <div id="carruselDestacado" class="carousel slide">
           <div class="carousel-inner">
@@ -134,15 +138,16 @@
           </button>
         </div>
       </section>
-      <section class="container-fluid planes">
+      <!-------------------------cards--------------------------------->
+      <section class="container-fluid planes mt-5">
         <h1 class="text-light text-center">Elegí tu plan</h1>
         <article class="row">
-          <div class="col-12 col-md-4">
-            <div class="card shadow logoDeStar text-light">
+          <div class="col-12 col-md-4 mb-3">
+            <div class="card logoDeStar text-light">
               <div class="card-body text-center">
                 <img
                   src="./assets/logoCard.png"
-                  class="w-100 logoDeStar"
+                  class="w-100 logoDeStar" 
                   alt="logo de star +"
                 />
                 <h5 class="card-title">ARS 1.749/mes (final)*</h5>
@@ -156,12 +161,12 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-md-4 mb-3">
             <div class="card shadow logoDeStar text-light">
               <div class="imgFondo">
                 <div class="card-body text-center">
                   <img
-                    class="logocombo w-100"
+                    class="logocombo w-100 "
                     src="./assets/logocombo.png"
                     alt="imagen de combo"
                   />
@@ -177,7 +182,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-md-4 mb-5">
             <div class="card shadow logoDeStar text-light">
               <div class="card-body text-center">
                 <img
@@ -198,7 +203,8 @@
           </div>
         </article>
       </section>
-      <section class="planes">
+      <!-------------------------seccion series--------------------------------->
+      <section class="planes mt-5">
         <article class="container text-light">
           <h2>¿Qué vas a ver primero?</h2>
           <p>
@@ -208,9 +214,239 @@
           <img class="w-100" src="./assets/img9.jpg" alt="" />
         </article>
       </section>
+      <!-------------------------seccion ESPN--------------------------------->
+      <section class="planes my-5">
+        <article class="container text-light">
+          <div class="row">
+            <div class="col-12 col-md-6 text-center my-5">
+              <h2 class="m-5">Más ESPN en Star+.</h2>
+              <p>
+                Los mejores torneos del mundo en vivo, series originales,
+                programas y eventos exclusivos.
+              </p>
+              <p>
+                El logotipo de F1 FORMULA 1, el logotipo de F1, F1, FORMULA 1,
+                FIA FORMULA ONE WORLD CHAMPIONSHIP, GRAND PRIX y las marcas
+                relacionadas son marcas comerciales de Formula One Licensing BV,
+                la empresa de Fórmula 1. Todos los derechos reservados.
+              </p>
+            </div>
+            <div class="col-12 col-md-6 text-center">
+              <img class="w-100" src="./assets/deportes.png" alt="deportes" />
+            </div>
+          </div>
+        </article>
+      </section>
+      <!-------------------------seccion Simpson--------------------------------->
+      <!-- <section class=""></section> -->
+      <!-------------------------seccion dispositivo--------------------------------->
+      <section class="planes">
+        <article class="container text-light text-center my-5">
+          <h2>Disponible en tus dispositivos favoritos</h2>
+          <div class="row">
+            <div class="col-12 col-md-3 my-5">
+              <img
+                class="w-100"
+                src="./assets/computadora.png"
+                alt="computadora"
+              />
+              <h3>Computadoras</h3>
+              <p>
+                Chrome OS
+                <br />
+                MacOS
+                <br />
+                PC Windows
+              </p>
+            </div>
+            <div class="col-12 col-md-3 my-5">
+              <img
+                class="w-100"
+                src="./assets/televisor.png"
+                alt="Televisor"
+              />
+              <h3>TV</h3>
+              <p>
+                Amazon Fire TV
+                <br />
+                Android TV
+                <br />
+                Apple TV
+              </p>
+            </div>
+            <div class="col-12 col-md-3 my-5">
+              <img
+                class="w-100"
+                src="./assets/mando.png"
+                alt="Mando"
+              />
+              <h3>Consolas</h3>
+              <p>
+                PS4
+                <br />
+                PS5
+                <br />
+                Xbox Series X
+              </p>
+            </div>
+            <div class="col-12 col-md-3 my-5">
+              <img
+                class="w-100"
+                src="./assets/celular.png"
+                alt="Celular"
+              />
+              <h3>Celulares y tabletas</h3>
+              <p>
+                Tabletas Amazon Fire
+                <br />
+                Celulares y tabletas Android
+                <br />
+                iPhone y iPad
+              </p>
+            </div>
+          </div>
+          
+        </article>
+        
+      </section>
+      <!-------------------------seccion Preguntas frecuentes--------------------------------->
+      <section class="planes">
+        <article class="container text-center text-light">
+          <h2>Preguntas frecuentes</h2>
+          <div class="" id="accordionPreguntas">
+            <div class="acordeonColor p-2 text-light">
+              <h2 class="accordion-header mb-3">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseOne"
+                  aria-expanded="true"
+                  aria-controls="panelsStayOpen-collapseOne"
+                >
+                  ¿Ya tenés Disney+ o Star+ y querés Combo+?
+                </button>
+              </h2>
+              <div
+                id="panelsStayOpen-collapseOne"
+                class="accordion-collapse collapse show"
+              >
+                <div class="accordion-body">
+                  <strong>This is the first item's accordion body.</strong> It
+                  is shown by default, until the collapse plugin adds the
+                  appropriate classes that we use to style each element. These
+                  classes control the overall appearance, as well as the showing
+                  and hiding via CSS transitions. You can modify any of this
+                  with custom CSS or overriding our default variables. It's also
+                  worth noting that just about any HTML can go within the
+                  <code>.accordion-body</code>, though the transition does limit
+                  overflow.
+                </div>
+              </div>
+            </div>
+            <div class="acordeonColor p-2 text-light">
+              <h2 class="accordion-header mb-3">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseOne"
+                  aria-expanded="true"
+                  aria-controls="panelsStayOpen-collapseOne"
+                >
+                  ¿Ya tenés Disney+ o Star+ y querés Combo+?
+                </button>
+              </h2>
+              <div
+                id="panelsStayOpen-collapseOne"
+                class="accordion-collapse collapse show"
+              >
+                <div class="accordion-body">
+                  <strong>This is the first item's accordion body.</strong> It
+                  is shown by default, until the collapse plugin adds the
+                  appropriate classes that we use to style each element. These
+                  classes control the overall appearance, as well as the showing
+                  and hiding via CSS transitions. You can modify any of this
+                  with custom CSS or overriding our default variables. It's also
+                  worth noting that just about any HTML can go within the
+                  <code>.accordion-body</code>, though the transition does limit
+                  overflow.
+                </div>
+              </div>
+            </div>
+            <div class="acordeonColor p-2 text-light">
+              <h2 class="accordion-header mb-3">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseOne"
+                  aria-expanded="true"
+                  aria-controls="panelsStayOpen-collapseOne"
+                >
+                  ¿Ya tenés Disney+ o Star+ y querés Combo+?
+                </button>
+              </h2>
+              <div
+                id="panelsStayOpen-collapseOne"
+                class="accordion-collapse collapse show"
+              >
+                <div class="accordion-body">
+                  <strong>This is the first item's accordion body.</strong> It
+                  is shown by default, until the collapse plugin adds the
+                  appropriate classes that we use to style each element. These
+                  classes control the overall appearance, as well as the showing
+                  and hiding via CSS transitions. You can modify any of this
+                  with custom CSS or overriding our default variables. It's also
+                  worth noting that just about any HTML can go within the
+                  <code>.accordion-body</code>, though the transition does limit
+                  overflow.
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
     </main>
-
-    <footer></footer>
+    <!-------------------------seccion footer--------------------------------->
+    <footer>
+      <section class="planes container text-light text-center my-5">
+        <article class="text-center">
+          <img src="./assets/logo.svg" alt="Logo de Star+" class="my-5 imgLogo">
+        </article>
+        <article class="row">
+          <div class="col-12 col-md-3 my-5">
+            <ul class="footerLista">
+              <li>
+                <a href="#">Término de uso</a>
+              </li>
+            </ul>
+            
+          </div>
+          <div class="col-12 col-md-3 my-5">
+            <ul class="footerLista">
+              <li>
+            <a href="#">Término de uso</a></li>
+          </ul>
+          </div>
+          <div class="col-12 col-md-3 my-5">
+            <ul class="footerLista">
+              <li>
+                <a href="#">Ayuda</a>
+              </li>
+            </ul class="footerLista">
+          </div>
+          <div class="col-12 col-md-3 my-5">
+            <ul class="footerLista">
+              <li>
+                <a href="#">Acerca de Star+</a>
+              </li>
+            </ul>
+          </div>
+        </article>
+        <p class="">© 2023 Disney y su familia de compañías afiliadas. Todos los derechos reservados.</p>
+      </section>
+    </footer>
 
     <!-- JavaScript Bootstrap-->
     <script

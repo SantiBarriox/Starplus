@@ -1,4 +1,6 @@
-
+body{
+    background: #090b13;
+}
 
 .imgLogo {
     width: 100px;
@@ -46,6 +48,7 @@
     }
 }
 
+
 .planes {
     background: #090b13;
 }
@@ -63,6 +66,22 @@
 } */
 
 .imgFondo{
-    background-image: url(../assets/fondologocombo.png);
-    background-repeat: no-repeat;
+    background: #230a5efb;
+    
+}
+
+
+.footerLista {
+    list-style: none;
+    
+}
+
+.footerLista a {
+    text-decoration: none;
+    margin: 0 10px;
+    color: #ffff;
+}
+
+.acordeonColor {
+    background: #35313f;
 }
