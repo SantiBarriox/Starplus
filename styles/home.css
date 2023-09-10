@@ -1,5 +1,4 @@
 /*General*/
-
 @font-face {
   font-family: 'Avenir' ;
   src: url(../assets/fonts/Disney_Avenir_Demi.ttf)
@@ -17,6 +16,8 @@ body{
 
 
 /*Tarjetas */
+
+
 
 .card .img-fit {
   aspect-ratio: 16 / 9;
