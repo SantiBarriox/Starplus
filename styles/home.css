@@ -1,6 +1,67 @@
+/*General*/
+@font-face {
+  font-family: 'Avenir' ;
+  src: url(../assets/fonts/Disney_Avenir_Demi.ttf)
+}
+
+
+body{
+  background: #090b13;
+}
+
+
 /*Cards */
+
+
 
 .card .img-fit {
   aspect-ratio: 16 / 9;
   object-fit: cover;
+}
+.card {
+  padding: 2px;
+}
+.card:hover {
+  border-color: #f9f9f9;
+
+}
+
+
+
+#title_tendencias {
+  font-family: 'Avenir';
+  font-size: 20px;
+color: #f9f9f9;
+padding: 1rem;
+}
+
+/*Footer */
+.imgLogo {
+  width: 100px;
+}
+
+.footerLista {
+  list-style: none;
+  
+}
+
+.footerLista a {
+  text-decoration: none;
+  margin: 0 10px;
+  color: #ffff;
+}
+
+.acordeonColor {
+  background: #35313f;
+}
+
+
+
+#btnIniciarSesion {
+  background-color: #4e4a59;
+}
+
+
+#btnInicSuscripcion{
+  background-color: #fc3c36;
 }
