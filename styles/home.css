@@ -1,39 +1,26 @@
 /*General*/
-<<<<<<< HEAD
 
-=======
->>>>>>> d9d925ac1ff1d2c6e370df61247043aca787e352
 @font-face {
   font-family: 'Avenir' ;
   src: url(../assets/fonts/Disney_Avenir_Demi.ttf)
 }
 
-<<<<<<< HEAD
 h1, h2 {
   font-family: 'Avenir';
 }
-=======
->>>>>>> d9d925ac1ff1d2c6e370df61247043aca787e352
 
 body{
   background: #090b13;
 }
 
 
-<<<<<<< HEAD
 
 
 /*Tarjetas */
-=======
-/*Cards */
-
-
->>>>>>> d9d925ac1ff1d2c6e370df61247043aca787e352
 
 .card .img-fit {
   aspect-ratio: 16 / 9;
   object-fit: cover;
-<<<<<<< HEAD
   cursor: pointer;
 }
 
@@ -74,22 +61,6 @@ font-weight: 700;
 
 #title_tendencias {
 text-align: center;
-=======
-}
-.card {
-  padding: 2px;
-}
-.card:hover {
-  border-color: #f9f9f9;
-
-}
-
-
-
-#title_tendencias {
-  font-family: 'Avenir';
-  font-size: 20px;
->>>>>>> d9d925ac1ff1d2c6e370df61247043aca787e352
 color: #f9f9f9;
 padding: 1rem;
 }
@@ -124,8 +95,5 @@ padding: 1rem;
 #btnInicSuscripcion{
   background-color: #fc3c36;
 }
-<<<<<<< HEAD
 
 
-=======
->>>>>>> d9d925ac1ff1d2c6e370df61247043aca787e352
