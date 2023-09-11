@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Encuentra algo para todos los gustos. Deportes en vivo, películas icónicas y series originales exclusivas, todo en Star+. Cuando quieras, donde quieras." />
+  <meta name="keywords" content="Deportes en vivo, péliculas,series" />
+  <meta name="author" content="Grupo 3 - Rolling Code" />
+  <link rel="shortcut icon" href="../assets/faviconStarPlus.png" />
+  <title>Deportes en vivo, películas y series | Star+</title>
+  <!-- CSS Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+  <script src="https://kit.fontawesome.com/8d13b22e35.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/styles/home.css" />
+</head>
+
+<body>
+  <!------------------------- header--------------------------------->
+  <header>
+    <!------------------------- navbar--------------------------------->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand imgLogo" href="#"><img src="../assets/logo.svg" alt="logo de star +" /></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#barraNavegacion"
+          aria-controls="barraNavegacion" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="barraNavegacion">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active btn text-light m-1" id="btnInicSuscripcion" aria-current="page"
+                href="#">SUSCRIBITE AHORA</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active btn text-light m-1" id="btnIniciarSesion" aria-current="page" href="#">INICIAR
+                SESIÓN</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <!-- Carrousel Images -->
+
+
+    <div class="container-fluid my-3">
+      <div id="carouselExampleInteval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <a href="../pages/error404.html"><img src="../assets/carrusel_greysanatomy.png"
+                class="d-block w-100 rounded" alt="Imagen serie Greys Anatomy"></a>
+            <div class="carousel-caption d-none d-md-block">
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="10000">
+            <a href="../pages/error404.html"><img src="../assets/carrusel_moving.png" class="d-block w-100 rounded"
+                alt="Imagen serie Moving"></a> 
+            <div class="carousel-caption d-none d-md-block">
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="10000">
+            <a href="../pages/error404.html"><img src="../assets/carrusel_snowdrop.png" class="d-block w-100 rounded"
+                alt="Imagen serie SnowDrop"></a>
+            <div class="carousel-caption d-none d-md-block">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!------------------ Tarjetas de Tendencias ------------------------->
+    <h1 id="title_tendencias">Tendencias</h1>
+
+
+    <div class="container">
+      <div class="row g-3">
+        <div class="col-md-3 col-6">
+          <div class="card">
+            <a href="../pages/error404.html"><img src="../assets/tendencias_modernfamily.jpg"
+                class="card-img img-fit"></a>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="card">
+            <a href="../pages/error404.html"><img src="../assets/tendencias_simpsons.jpg" class="card-img img-fit"></a>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="card">
+            <a href="../pages/error404.html"><img src="../assets/tendencias_thisusjpg.jpg" class="card-img img-fit"></a>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="card">
+            <a href="../pages/error404.html"><img src="../assets/tendencias_twd.jpg" class="card-img img-fit"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!------------------ Tarjetas de Películas------------------------->
+
+    <h2 id="title_tendencias">Películas</h2>
+
+    <div class="container">
+      <div class="row g-3">
+        <div class="col-md-3 col-6">
+          <div class="card">
+            <a href="../pages/movie.html"><img src="../assets/peliculas_topgun.jpg"
+                alt="Imagen de película Top Gun Maverick" class="card-img img-fit"></a>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="card">
+            <a href="../pages/error404.html"><img src="../assets/peliculas_docehoras.jpg"
+                alt="Imagen de película Doce Horas" class="card-img img-fit"></a>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="card">
+            <a href="../pages/error404.html"><img src="../assets/peliculas_jurasic.jpg"
+                alt="Imagen de película Jurasic Park" class="card-img img-fit"></a>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="card">
+            <a href="../pages/error404.html"><img src="../assets/peliculas_eltigre.jpg"
+                alt="Imagen de película El Tigre" class="card-img img-fit"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!------------------ Tarjetas de Series ------------------------->
+    <h2 id="title_tendencias">Series</h2>
+    <div class="container">
+      <div class="row g-3">
+        <div class="col-md-3 col-6">
+          <div class="card">
+            <a href="../pages/error404.html"><img src="../assets/series_elencargado.jpg"
+                alt="Imagen portada serie El Encargado" class="card-img img-fit"></a>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="card">
+            <a href="../pages/error404.html"><img src="../assets/series_greysanatomy.jpg"
+                alt="Imagen portada serie Greys Anatomy" class="card-img img-fit"></a>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="card">
+            <a href="../pages/error404.html"><img src="../assets/series_elcomandante.jpg"
+                alt="Imagen portada serie El Comandante" class="card-img img-fit"></a>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="card">
+            <a href="../pages/error404.html"><img src="../assets/series_ringo.jpg" alt="Imagen portada serie Ringo"
+                class="card-img img-fit"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!------------------ Tarjetas de Deportes ------------------------->
+    <h2 id="title_tendencias">Deportes en vivo</h2>
+    <div class="container">
+      <div class="row g-3">
+        <div class="col-md-3 col-6">
+          <div class="card">
+            <a href="../pages/error404.html"><img src="../assets/deportes_futbol.jpg" 
+                alt="Imagen portada partido Premier League" class="card-img img-fit"></a>
+            <div class="label-top shadow-sm">VIVO</div>
+            <div class="card-body">
+              <p class="card-text">Premier League I WestHam vs Manchester City </p>
+              <img class=logo_espn src="../assets/logo_espn.png" class="card-img img-fit">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="card">
+            <a href="../pages/error404.html"><img src="../assets/deportes_f90.jpg" alt="Imagen de programa F90"
+                class="card-img img-fit"></a>
+            <div class="label-top shadow-sm">VIVO</div>
+            <div class="card-body">
+              <p class="card-text">ESPN F90 I Argentina</p>
+              <img class=logo_espn src="../assets/logo_espn.png" class="card-img img-fit">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="card">
+            <a href="../pages/error404.html"><img src="../assets/deportes_mundialrugby.jpg"
+                alt="Imagen de portada Mundial de Rugby" class="card-img img-fit"></a>
+            <div class="label-top shadow-sm">VIVO</div>
+            <div class="card-body">
+              <p class="card-text">Mundial de Rugby Francia 2023</p>
+              <img class=logo_espn src="../assets/logo_espn.png" class="card-img img-fit">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="card sports">
+            <a href="../pages/error404.html"><img src="../assets/deportes_sportscenter.jpg"
+                alt="Imagen de programa SportsCenter" class="card-img img-fit"></a>
+            <div class="label-top shadow-sm">VIVO</div>
+            <div class="card-body">
+              <p class="card-text">SportsCenter</p>
+              <img class=logo_espn src="../assets/logo_espn.png" class="card-img img-fit">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!------------------ Tarjetas de Categorías ------------------------->
+    <h2 id="title_tendencias">Categorías</h2>
+    <div class="container">
+      <div class="row g-3">
+        <div class="col-md-3 col-6">
+          <div class="card">
+            <a href="../pages/error404.html"><img src="../assets/categoria_comedia.png" alt="Portada categoría comedia" class="card-img img-fit"></a>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="card">
+            <a href="../pages/error404.html"><img src="../assets/categoria_drama.png" alt="Portada categoría drama" class="card-img img-fit"></a>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="card">
+            <a href="../pages/error404.html"><img src="../assets/categoria_misterio.png" alt="Portada categoría misterio" class="card-img img-fit"></a>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="card">
+            <a href="../pages/error404.html"><img src="../assets/categoria_terror.png" alt="Portada categoría terror" class="card-img img-fit"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-------------------------seccion footer--------------------------------->
+  <footer>
+    <section class="planes container text-light text-center my-5">
+      <article class="text-center">
+        <img src="../assets/logo.svg" alt="Logo de Star+" class="my-5 imgLogo">
+      </article>
+      <article class="row">
+        <div class="col-12 col-md-3 my-5">
+          <ul class="footerLista">
+            <li>
+              <a href="#">Término de uso</a>
+            </li>
+          </ul>
+
+        </div>
+        <div class="col-12 col-md-3 my-5">
+          <ul class="footerLista">
+            <li>
+              <a href="#">Término de uso</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-3 my-5">
+          <ul class="footerLista">
+            <li>
+              <a href="#">Ayuda</a>
+            </li>
+          </ul class="footerLista">
+        </div>
+        <div class="col-12 col-md-3 my-5">
+          <ul class="footerLista">
+            <li>
+              <a href="#">Acerca de Star+</a>
+            </li>
+          </ul>
+        </div>
+      </article>
+      <p class="">© 2023 Disney y su familia de compañías afiliadas. Todos los derechos reservados.</p>
+    </section>
+  </footer>
+  <!-- JavaScript Bootstrap-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+</body>
+</body>
+
+</html>
