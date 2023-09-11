@@ -18,6 +18,10 @@ body{
 
 /*Tarjetas */
 
+.card {
+  height: 100%;
+  }
+
 .card .img-fit {
   aspect-ratio: 16 / 9;
   object-fit: cover;
