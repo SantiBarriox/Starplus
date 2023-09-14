@@ -2,11 +2,24 @@ body{
     background: #090b13;
 }
 
+<<<<<<< HEAD
 .imgLogo {
     width: 100%;
     height: 100%;
     margin: 0px;
     object-fit: cover;
+=======
+.imgLogoHeader {
+    width: 20%;
+    height: 20%;
+    margin: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.imgLogo {
+    width: 100px;
+>>>>>>> 1312f83819db8e6a398183a08bb5d2de4d0b931e
 }
 
 #btnIniciarSesion {
@@ -25,6 +38,15 @@ body{
     width: 300px;
 }
 
+<<<<<<< HEAD
+=======
+.btn-continuar{
+    background: linear-gradient(82deg,#e1054a 19%,#ce4100);
+    color: #f9f9f9;
+    border-radius: 8%;
+    font-size: 110%;
+}
+>>>>>>> 1312f83819db8e6a398183a08bb5d2de4d0b931e
 
 @media (max-width:576px){
     .imgTitulo{
