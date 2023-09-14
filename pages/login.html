@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,9 +13,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
     <script src="https://kit.fontawesome.com/8d13b22e35.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/styles/login.css" />
+    <link rel="stylesheet" href="../styles/login.css" />
 </head>
-
 <body>
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
@@ -52,10 +50,10 @@
     <header class="container">
         <img class="imgLogoHeader mx-auto" src="../assets/logo.svg" alt="logo de star+">
     </header>
+    <div class="container div-medio">
     <main class="mainLogin container my-4 text-light">
-      <h1>Inicia sesión con tu correo</h1>
-      <hr/>
-      <form class="bg-dark rounded p-3 text-white col-6" id="form-login">
+      <h1 class="text-center">Inicia sesión con tu correo</h1>
+      <form class="bg-dark rounded p-3 text-white col-md-6 container" id="form-login">
         <div class="alert alert-warning d-none" id="alert-login">
           Las credenciales no coinciden con nuestros registros.
         </div>
@@ -74,10 +72,11 @@
         </div>
       </form>
       <div class="mt-3">
-        <p>¿Primera vez en Star+?
+        <p class="text-center">¿Primera vez en Star+?
         <a class="link-suscribirse" href="./register.html">Suscribirme</a></p>
       </div>
     </main>
+  </div>
     <footer>
         <section class="planes container text-light text-center my-5">
           <article class="text-center">

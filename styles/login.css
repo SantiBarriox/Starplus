@@ -10,6 +10,10 @@ body{
     justify-content: center;
 }
 
+p{
+    margin-bottom: 10%;
+}
+
 .imgLogo {
     width: 100px;
 }
