@@ -1,7 +1,10 @@
+* {
+    font-family: 'Avenir' ;
+    src: url(../assets/fonts/Disney_Avenir_Demi.ttf)
+  }
 body{
     background: #090b13;
 }
-
 .imgLogo {
     width: 100px;
 }
@@ -49,9 +52,9 @@ body{
 }
 
 
-.planes {
+/* .planes {
     background: #090b13;
-}
+} */
 
 .logoDeStar {
     background: #090b13;
