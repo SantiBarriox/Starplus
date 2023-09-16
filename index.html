@@ -35,7 +35,7 @@
       <!------------------------- navbar--------------------------------->
       <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand imgLogo" href="#"
+          <a class="navbar-brand imgLogo" href="./index.html"
             ><img src="./assets/logo.svg" alt="logo de star +"
           /></a>
           <button
@@ -59,7 +59,7 @@
                   class="nav-link active btn text-light m-1"
                   id="btnInicSuscripcion"
                   aria-current="page"
-                  href="#"
+                  href="./pages/error404.html"
                   >SUSCRIBITE AHORA</a
                 >
               </li>
@@ -68,9 +68,14 @@
                   class="nav-link active btn text-light m-1"
                   id="btnIniciarSesion"
                   aria-current="page"
-                  href="#"
+                  href="./pages/login.html"
                   >INICIAR SESIÓN</a
                 >
+              </li>
+              <li class="nav-item ms-md-auto">
+                <button class="nav-link text-danger d-none" id="boton-salir">
+                  Salir
+                </button>
               </li>
             </ul>
           </div>
@@ -447,5 +452,8 @@
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
+    <script type="module" src="./js/index/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="./js/logout.js"></script>
   </body>
 </html>
