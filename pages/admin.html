@@ -78,12 +78,11 @@
           </fieldset>
           <fieldset class="mb-2">
             <label for="input-tipo" class="form-label">Tipo</label>
-            <input
-              type="text"
-              placeholder="peliculas"
-              class="form-control"
-              id="input-tipo"
-            />
+            <select id="input-tipo" class="form-select" aria-label="Default select example">
+              <option selected>Tipo</option>
+              <option value="Peliculas">Peliculas</option>
+              <option value="Series">Series</option>
+            </select>
             <div class="invalid-feedback">
               Ingrese un tipo valido
             </div>
@@ -126,12 +125,11 @@
           </fieldset>
           <fieldset class="mb-2">
             <label for="input-publicada" class="form-label">Publicada</label>
-            <input
-              type="text"
-              placeholder="Si/No"
-              class="form-control"
-              id="input-publicada"
-            />
+            <select id="input-publicada" class="form-select" aria-label="Default select example">
+              <option selected>Seleccionar</option>
+              <option value="si">Si</option>
+              <option value="no">No</option>
+            </select>
             <div class="invalid-feedback">
               Ingrese si o no
             </div>
