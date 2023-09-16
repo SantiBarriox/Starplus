@@ -18,7 +18,7 @@ botonSalir.addEventListener("click",()=>{
         confirmButtonText:"Si, salir",
         cancelButtonText:"Cacelar",
         showCancelButton: true,
-    }).then((resultado)=>{
+    }).then((resultado)=>{ 
         if(resultado.isConfirmed){
             // limpiar el SESSIONSTORAGE
             sessionStorage.removeItem("estaLogueado")
