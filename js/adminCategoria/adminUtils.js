@@ -50,7 +50,7 @@ const tdBotones = document.createElement("td");
   tdBotones.appendChild(btnEliminar);
 
   tr.appendChild(tdBotones);
-// 
+//  
     tbody.appendChild(tr)
 }
 
