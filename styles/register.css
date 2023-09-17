@@ -2,7 +2,6 @@ body{
     background: #090b13;
 }
 
-
 .imgLogo {
     width: 100%;
     height: 100%;
@@ -21,13 +20,22 @@ body{
     width: 100px;
 }
 
-#btnIniciarSesion {
-    background-color: #4e4a59;
+.btn-guardar{
+    background: linear-gradient(82deg,#e1054a 19%,#ce4100);
 }
 
+#btnIniciarSesion {
+    background-color: #4e4a59;
+    &:hover{
+        cursor: pointer;
+    }
+}
 
 #btnInicSuscripcion{
     background-color: #fc3c36;
+    &:hover{
+        cursor: pointer;
+    }
 }
 
 .imgTitulo{
@@ -45,6 +53,42 @@ body{
 }
 
 
+.planes {
+    background: #090b13;
+}
+
+.logoDeStar {
+    background: #090b13;
+}
+
+.btnCardSuscripcion {
+    background: #6421ff;
+}
+
+.logocombo{
+    background: #090b13;
+}
+
+.imgFondo{
+    background: #230a5efb;
+    
+}
+
+
+.footerLista {
+    list-style: none;
+    
+}
+
+.footerLista a {
+    text-decoration: none;
+    margin: 0 10px;
+    color: #ffff;
+}
+
+.acordeonColor {
+    background: #35313f;
+}
 @media (max-width:576px){
     .imgTitulo{
         display: none;
@@ -68,42 +112,4 @@ body{
         width: 500px;
        
     }
-}
-
-
-.planes {
-    background: #090b13;
-}
-
-.logoDeStar {
-    background: #090b13;
-}
-
-.btnCardSuscripcion {
-    background: #6421ff;
-}
-
-/* .logocombo{
-    background: #090b13;
-} */
-
-.imgFondo{
-    background: #230a5efb;
-    
-}
-
-
-.footerLista {
-    list-style: none;
-    
-}
-
-.footerLista a {
-    text-decoration: none;
-    margin: 0 10px;
-    color: #ffff;
-}
-
-.acordeonColor {
-    background: #35313f;
 }
