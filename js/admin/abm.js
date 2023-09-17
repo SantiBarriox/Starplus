@@ -14,9 +14,6 @@ agregarPeliculasOSeriesALS(nuevaPOS);
     })
 };
 
- 
-
-
 export const editarPeliculasSeries = (nombre, tipo, duracion, caratula, descripcion, publicada) =>{
     // traer lista y el codigo 
 const codigo = sessionStorage.getItem("codigoPeliculaOSerie")

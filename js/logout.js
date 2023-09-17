@@ -1,30 +1,26 @@
-// selecciono el boton
+'use strict'
 
-const botonSalir = document.getElementById("boton-salir")
-
-// motrar u ocultar el boton
-
-const estaLogueado = JSON.parse(sessionStorage.getItem("estaLogueado"));
-if(estaLogueado){
-    botonSalir.classList.remove("d-none")
+const botonSalir = document.getElementById('boton-salir');
+const estaLogueado = JSON.parse(sessionStorage.getItem('estaLogueado'));
+if (estaLogueado) {
+    botonSalir.classList.remove('d-none');
 }
 
-// agregar accion al boton
+botonSalir.addEventListener('click', (e) => {
+swal.fire({
+    title: '¿Estás seguro?',
+    text: '¡Cerrarás tu sesión!',
+    confirmButtonText: 'Sí, salir',
+    cancelButtonText: 'Cancelar',
+    showCancelButton: true,
+})
+.then((resultado) => {
+if (resultado.isConfirmed){
+sessionStorage.removeItem('estaLogueado');
+sessionStorage.removeItem('usuario');
 
-botonSalir.addEventListener("click",()=>{
-    swal.fire({
-        title:"¿Estás seguro?",
-        text: "Cerrarás tu sesión",
-        confirmButtonText:"Si, salir",
-        cancelButtonText:"Cacelar",
-        showCancelButton: true,
-    }).then((resultado)=>{ 
-        if(resultado.isConfirmed){
-            // limpiar el SESSIONSTORAGE
-            sessionStorage.removeItem("estaLogueado")
-            sessionStorage.removeItem("usuario")
-            // redireccionar home
-            window.location.href = "/"
-        } 
-    })
+window.location.href = './pages/login.html';
+
+}
+})
 })

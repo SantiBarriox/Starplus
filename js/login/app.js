@@ -1,72 +1,44 @@
-"use strict";
+'use strict'
 
-import { User, UserSinContraseña } from "./User.js";
-import { validarContraseña, validarUsuario } from "./validators.js";
-
-// Proteger ruta 
-const estaLogueado = JSON.parse(sessionStorage.getItem("estaLogueado"))
-if(estaLogueado){
-
-    window.location.href = "./admin.html"
-}
+import { Usuario, UsuarioSinContra } from "./User.js"
+import { validarContrasenia, validarUsuario, } from "./validators.js";
 
 
-//  creo usuario por defeto
+const usuarioAdmin = new Usuario('admin','admin','admin@gmail.com');
+const formLogin = document.getElementById('form-login');
+const campoUsuario = document.getElementById('input-usuario');
+const campoContrasenia = document.getElementById('input-contrasenia');
+const alertaCredenciales = document.getElementById('alert-login');
 
-const usuarioAdmin = new User("admin", "admin", "admin@gmail");
+formLogin.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const usuario = campoUsuario.value;
+    const contrasenia = campoContrasenia.value;
 
-// seleccionar elementos
+    if (validarUsuario(usuario, campoUsuario) && validarContrasenia(contrasenia, campoContrasenia)){
+        campoUsuario.classList.remove('is-valid');
+        campoContrasenia.classList.remove('is-valid');
+        
+        if (usuario === usuarioAdmin.usuario && contrasenia === usuarioAdmin.contrasenia){
+            alertaCredenciales.classList.add('d-none');
 
-const formLogin = document.getElementById("form-login");
-const campoUsuario = document.getElementById("input-usuario");
-const campoContraseña = document.getElementById("input-contraseña");
-const alertCredenciales = document.getElementById("alert-login");
+            const usuarioLogueado = new UsuarioSinContra(usuario,'admin@gmail.com');
 
-// manejar el submit
+            sessionStorage.setItem('estaLogueado',true);
+            sessionStorage.setItem('usuario',JSON.stringify(usuarioLogueado));
 
-formLogin.addEventListener("submit", (e) => {
-  // prevengo comportamiento por defecto
-  e.preventDefault();
-  // leer valores de los campos
-  const usuario = campoUsuario.value;
-  const contraseña = campoContraseña.value;
-  // validar
-  if (
-    validarUsuario(usuario, campoUsuario) &&
-    validarContraseña(contraseña, campoContraseña)
-  ) {
-    // ocultar la alerta y resetear las clases
-    campoUsuario.classList.remove("is-invalid");
-    campoContraseña.classList.remove("is-invalid");
-
-    // validamos credenciales
-    if (
-      usuario === usuarioAdmin.usuario &&
-      contraseña === usuarioAdmin.contraseña
-    ) {
-      // solo aca el login esta ok
-      // ocultar alert
-      alertCredenciales.classList.add("d-none");
-
-      // crear usuario sin contraseña pguardar
-        const usuarioLogueado = new UserSinContraseña(usuario,"admin@gmail.com")
-      // guarar estado
-      sessionStorage.setItem("estaLogueado", true);
-      sessionStorage.setItem("usuario",JSON.stringify(usuarioLogueado))  
-      // mensaje de logueo
-        swal.fire({
-            title:"Bienvenido",
-            timer:1500,
-            timerProgressBar:true,
-            showConfirmButton:false,
-        }).then(()=>{
-            // redireccion a admin
-            window.location.href = "./admin.html"
-        })
-
-    } else {
-      // credenciales no validas
-      alertCredenciales.classList.remove("d-none");
+            swal.fire({
+                title: 'Bienvenido 🤗',
+                timer: 1500,
+                timerProgressBar: true,
+                showConfirmButton: false,
+                icon: 'success',
+            }) 
+            .then (() => {
+                window.location.href = './admin.html' //cambiar a pagina de admin
+            })
+        } else {
+            alertaCredenciales.classList.remove('d-none');
+        }
     }
-  }
-});
+})
