@@ -1,7 +1,4 @@
-"use strict"
-
-
-
+'use strict'
 export class PeliculaSeries {
     constructor(nombre, tipo, duracion, caratula, descripcion, publicada){
     this.nombre = nombre;
@@ -11,6 +8,6 @@ export class PeliculaSeries {
     this.descripcion = descripcion;
     this. publicada =  publicada;
     this.codigo = self.crypto.randomUUID();
-    
+
 }
 }

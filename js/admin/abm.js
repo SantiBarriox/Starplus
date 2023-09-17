@@ -1,3 +1,5 @@
+'use strict'
+
 import { PeliculaSeries } from "./PeliculasSeries.js";
 import { agregarPeliculasOSeriesALS, cargarTabla, obtenerPeliculasOSeriesDeLS } from "./adminUtils.js";
 
@@ -8,70 +10,68 @@ export const añadirPeliculasSerie = (nombre, tipo, duracion, caratula, descripc
 agregarPeliculasOSeriesALS(nuevaPOS);
 
     swal.fire({
-        title:"Exito",
-        text: "Se guardo de manera exitosa",
+        title:"Éxito",
+        text: "Se guardó de manera exitosa",
         icon:"success",
     })
 };
 
 export const editarPeliculasSeries = (nombre, tipo, duracion, caratula, descripcion, publicada) =>{
-    // traer lista y el codigo 
+
 const codigo = sessionStorage.getItem("codigoPeliculaOSerie")
 const peliculaOSerie = obtenerPeliculasOSeriesDeLS();
-// si no hay codigo es null
+
 if(!codigo){
     swal.fire({
         title: "Error",
-        text:"No se encontro",
+        text:"No se encontró",
         icon: "Error",
     })
     return;
 } 
-// bucar pelicula
-const posicionpeliculaOSerie = peliculaOSerie.findIndex(
+
+const posicionPeliculaOSerie = peliculaOSerie.findIndex(
     (item)=>item.codigo === codigo
     );
-if(posicionpeliculaOSerie === -1){
+if(posicionPeliculaOSerie === -1){
     swal.fire({
         title: "Error",
-        text:"No se encontro",
+        text:"No se ha encontró",
         icon: "Error",
     })
 }
-// crear el editado
-const pelicilaOSerieEditada = new PeliculaSeries(nombre,tipo,duracion,caratula,descripcion,publicada)
-// eliminar el anterior y agregar el nuevo
-peliculaOSerie.splice(posicionpeliculaOSerie,1,pelicilaOSerieEditada)
-// guardar en el ls
+
+const peliculaOSerieEditada = new PeliculaSeries(nombre,tipo,duracion,caratula,descripcion,publicada)
+
+peliculaOSerie.splice(posicionPeliculaOSerie,1,peliculaOSerieEditada);
 
 localStorage.setItem("peliculasSeries", JSON.stringify(peliculaOSerie))
 swal.fire({
-    title: "Exito",
-    text:"Se modifico con exito",
+    title: "Éxito",
+    text:"Se modificó con éxito",
     icon: "success",
 })
 
-// resetear estado previo a edicion
 
 sessionStorage.removeItem("codigoPeliculaOSerie")
 }
 
 
 export const eliminarPeliculasSerie = (codigo) => {
-//    confirmar
+
 swal
 .fire({
-    title:"¿Estas seguro?",
+    title:"¿Estás seguro?",
     text:"Esta opción no será reversible",
     icon:"warning",
     showCancelButton: true,
     cancelButtonText:"Cancelar",
-    confirmButtonText:"Si, eliminar",
+    confirmButtonText:"Sí, eliminar",
     })
     .then((action)=>{
         if(action.isConfirmed){
             
-            // trer lista
+           
             const peliculaOSerie = obtenerPeliculasOSeriesDeLS();
 
             const listaFiltrada = peliculaOSerie.filter(
@@ -80,11 +80,11 @@ swal
                 localStorage.setItem("peliculasSeries", JSON.stringify(listaFiltrada))
 
                 swal.fire({
-                    title: "Exito",
-                    text:"Se elimino con exito",
+                    title: "Éxito",
+                    text:"Se eliminó con éxito",
                     icon: "success",
                 })
-                // recargar tabla
+                
                 cargarTabla();
 
         } 

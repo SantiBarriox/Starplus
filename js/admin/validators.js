@@ -1,3 +1,5 @@
+'use strict'
+
 export const validarNombre = (valor,campoNombre) => {
     if(valor.trim().length <= 2 || valor.trim().length >= 100) {
         campoNombre.classList.add("is-invalid");
@@ -29,7 +31,6 @@ export const validarDuracion = (valor,campoDuracion) =>{
     campoDuracion.classList.add("is-valid")
     return true;
 }
-
 
 
 export const validarCaratula = (valor,campoCaratula) =>{

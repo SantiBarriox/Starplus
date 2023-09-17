@@ -7,19 +7,22 @@ if (estaLogueado) {
 }
 
 botonSalir.addEventListener('click', (e) => {
-swal.fire({
-    title: '¿Estás seguro?',
-    text: '¡Cerrarás tu sesión!',
-    confirmButtonText: 'Sí, salir',
-    cancelButtonText: 'Cancelar',
-    showCancelButton: true,
-})
-.then((resultado) => {
-if (resultado.isConfirmed){
-sessionStorage.removeItem('estaLogueado');
-sessionStorage.removeItem('usuario');
+    Swal.fire({
+        title: '¿Estás seguro?',
+        text: "¡Cerrarás tu sesión!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sí, salir',
+        cancelButtonText: 'Cancelar',
+      })
+      .then((resultado) => {
+        if (resultado.isConfirmed){
+            sessionStorage.removeItem('estaLogueado');
+            sessionStorage.removeItem('usuario');
 
-window.location.href = './pages/login.html';
+            window.location.href = '../pages/login.html';
 
 }
 })

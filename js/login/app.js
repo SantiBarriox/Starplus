@@ -27,15 +27,25 @@ formLogin.addEventListener('submit', (e) => {
             sessionStorage.setItem('estaLogueado',true);
             sessionStorage.setItem('usuario',JSON.stringify(usuarioLogueado));
 
+
             swal.fire({
-                title: 'Bienvenido 🤗',
-                timer: 1500,
+                title: 'BIENVENIDO A STAR+',
+                text: 'Disfruta de nuestra programación',
+                imageUrl: '../assets/star+Fondo.png',
+                imageWidth: 400,
+                imageHeight: 200,
+                imageAlt: 'star+ image',
+                timer: 3700,
                 timerProgressBar: true,
                 showConfirmButton: false,
-                icon: 'success',
+                background: '#f9f9f9',
+                backdrop: `
+                  url("../assets/mario.gif")
+                  no-repeat
+                `
             }) 
             .then (() => {
-                window.location.href = './admin.html' //cambiar a pagina de admin
+                window.location.href = './admin.html'
             })
         } else {
             alertaCredenciales.classList.remove('d-none');
