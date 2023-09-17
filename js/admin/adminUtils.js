@@ -1,5 +1,6 @@
+import { prepararEdicionDeCat } from "../adminCategoria/adminUtils.js";
 import { ordenarLista } from "../utils.js";
-import { eliminarPeliculasSerie } from "./abm.js";
+import { destacarPeliculasSerie, eliminarPeliculasSerie } from "./abm.js";
 
 export const obtenerPeliculasOSeriesDeLS = () => {
   return JSON.parse(localStorage.getItem("peliculasSeries")) || [];
@@ -54,16 +55,21 @@ export const crearFilaTabla = (peliculaOSerie, indice) => {
   tr.appendChild(tdpublicada);
 
   // botones
+  // botones
   const tdBotones = document.createElement("td");
   const btnEditar = document.createElement("button");
   const btnEliminar = document.createElement("button");
+  const btnDestacar = document.createElement("button");
 
   btnEditar.type = "button";
   btnEliminar.type = "button";
+  btnDestacar.type = "button"
   btnEditar.classList.add("btn", "btn-warning", "btn-sm", "me-2");
-  btnEliminar.classList.add("btn", "btn-danger", "btn-sm");
+  btnEliminar.classList.add("btn", "btn-danger", "btn-sm", "me-2");
+  btnDestacar.classList.add("btn", "btn-danger", "btn-sm");
   btnEditar.innerText = "Editar";
   btnEliminar.innerText = "Eliminar";
+  btnDestacar.innerText = "Destacar";
 
   btnEditar.onclick = () => {
     prepararEdicionDePOS(peliculaOSerie.codigo);
@@ -71,8 +77,12 @@ export const crearFilaTabla = (peliculaOSerie, indice) => {
   btnEliminar.onclick = () => {
     eliminarPeliculasSerie(peliculaOSerie.codigo)
   };
+  btnDestacar.onclick = () => {
+    destacarPeliculasSerie(peliculaOSerie.codigo)
+  }
   tdBotones.appendChild(btnEditar);
   tdBotones.appendChild(btnEliminar);
+  tdBotones.appendChild(btnDestacar);
   tr.appendChild(tdBotones);
   // añadir todo
   tbody.appendChild(tr);
@@ -127,3 +137,7 @@ export const estaEditando = () =>{
     return true;
   }
 }
+
+
+
+

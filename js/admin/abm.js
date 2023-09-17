@@ -93,3 +93,34 @@ swal
         } 
     });
 }
+
+// detacar peliculas
+
+export const destacarPeliculasSerie = (codigo)=>{
+ const peliculaOSerie = obtenerPeliculasOSeriesDeLS()
+
+ const indexPelicula = peliculaOSerie.findIndex((item)=>{
+    return item.codigo === codigo;
+ })
+ if (indexPelicula === -1) {
+    console.error("Hubo un error");
+    return;
+  }
+  peliculaOSerie.forEach((_, index) => {
+    peliculaOSerie[index].destacada = false;
+  });
+  peliculaOSerie[indexPelicula].destacada = !peliculaOSerie[indexPelicula].destacada;
+  localStorage.setItem("peliculaOSerie", JSON.stringify(peliculaOSerie));
+  swal
+.fire({
+    title:"Exito",
+    text:"Se destaco la pelicula",
+    icon:"success",
+    })
+}
+
+// muestra la pelicula
+
+const mostrarPeliculaDestacada = (codigo) => {
+
+}
