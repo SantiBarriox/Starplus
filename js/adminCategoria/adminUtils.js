@@ -45,7 +45,7 @@ const tdBotones = document.createElement("td");
     eliminarCategorias(categoria.codigo)
   
   };
-  
+   
   tdBotones.appendChild(btnEditar);
   tdBotones.appendChild(btnEliminar);
 
