@@ -20,7 +20,7 @@ body{
     width: 100px;
 }
 
-.btn-guardar{
+#btn-guardar-register{
     background: linear-gradient(82deg,#e1054a 19%,#ce4100);
 }
 

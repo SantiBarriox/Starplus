@@ -65,3 +65,4 @@ if (validarNombre(nombre,campoNombre) && validarCelular(contrasenia,campoContras
     campoEmail.classList.remove('is-valid','is-invalid');
 }
 });
+

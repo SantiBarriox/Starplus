@@ -45,7 +45,7 @@ formLogin.addEventListener('submit', (e) => {
                 `
             }) 
             .then (() => {
-                window.location.href = './admin.html'
+                window.location.href = '../pages/admin.html'
             })
         } else {
             alertaCredenciales.classList.remove('d-none');

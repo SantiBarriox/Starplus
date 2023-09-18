@@ -3,7 +3,6 @@
 import { obtenerContactosDeLS, ordenarLista } from "../utilsReg.js";
 import { eliminarContacto } from "./abmReg.js";
 
-
 export const agregarContactoALS = (nuevoContacto) => {
 const contactos = ordenarLista(obtenerContactosDeLS());
 contactos.push(nuevoContacto);
@@ -62,6 +61,29 @@ tr.appendChild(tdBotones);
 
 tbody.appendChild(tr);
 }
+//
+
+export const crearNuevoRegistro = (nuevoContacto) => {
+const tdBoton = document.createElement('td');
+const btnGuardarReg = document.createElement('boton');
+
+btnGuardarReg.type = 'button';
+
+btnGuardarReg.classList.add('btn', 'btn-sm')
+
+btnGuardarReg.innerText = 'Guardar';
+
+
+btnGuardarReg.onclick = () => {
+window.location.href = '../pages/error404.html';
+
+tdBoton.appendChild(btnGuardarReg);
+
+tr.appendChild(tdBoton);
+}
+}
+//
+
 
 export const cargarTabla = () => {
 const contactos = ordenarLista(obtenerContactosDeLS());
