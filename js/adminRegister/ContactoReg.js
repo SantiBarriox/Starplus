@@ -1,6 +1,6 @@
 'use strict'
 
-export class Usuario{
+export class Contacto{
     constructor(nombre,contrasenia,email){
         this.nombre = nombre;
         this.contrasenia = contrasenia;
