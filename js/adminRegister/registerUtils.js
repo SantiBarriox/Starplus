@@ -1,7 +1,8 @@
 'use strict'
 
-// import { obtenerContactosDeLS, ordenarLista } from "../utils.js";
-// import { eliminarContacto } from "./abm.js";
+import { obtenerContactosDeLS, ordenarLista } from "../utilsReg.js";
+import { eliminarContacto } from "./abmReg.js";
+
 
 export const agregarContactoALS = (nuevoContacto) => {
 const contactos = ordenarLista(obtenerContactosDeLS());

@@ -1,8 +1,9 @@
 'use strict'
 
-// import { obtenerContactosDeLS } from "../utils.js";
-// import { Contacto } from "./Contacto.js";
-// import { agregarContactoALS, cargarTabla, } from "./adminUtils.js";
+import { obtenerContactosDeLS } from "../utilsReg.js";
+import { Contacto } from "./ContactoReg.js";
+import { agregarContactoALS, cargarTabla } from "./registerUtils.js";
+
 
 export const añadirContacto = (nombre,contrasenia,email) => {
 const nuevoContacto = new Contacto(nombre,contrasenia,email);

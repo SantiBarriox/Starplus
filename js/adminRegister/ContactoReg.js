@@ -1,5 +1,4 @@
 'use strict'
-
 export class Contacto{
     constructor(nombre,contrasenia,email){
         this.nombre = nombre;

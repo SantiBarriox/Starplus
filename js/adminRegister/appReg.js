@@ -1,15 +1,8 @@
 'use strict'
 
-// import { validarContrasenia } from "./validatorsReg";
-
-// import { añadirContacto, editarContacto } from './abm.js';
-// import { cargarTabla, estaEditando } from './adminUtils.js';
-// import {
-//     validarNombre,
-//     validarCelular,
-//     validarEmail,
-//     validarImagen,
-// } from './validators.js';
+import { añadirContacto, editarContacto } from "./abmReg.js";
+import { cargarTabla, estaEditando } from "./registerUtils.js";
+import { validarContrasenia, validarEmail, validarNombre } from "./validatorsReg.js";
 
 
 const estaLogueado = JSON.parse(sessionStorage.getItem('estaLogueado'));
