@@ -1,11 +1,11 @@
-import { prepararEdicionDeCat } from "../adminCategoria/adminUtils.js";
+import { obtenerCategoriaDeLS, prepararEdicionDeCat } from "../adminCategoria/adminUtils.js";
 import { ordenarLista } from "../utils.js";
 import { destacarPeliculasSerie, eliminarPeliculasSerie } from "./abm.js";
-
+// OBTENER PELICULAS O SERIES DEL LS
 export const obtenerPeliculasOSeriesDeLS = () => {
   return JSON.parse(localStorage.getItem("peliculasSeries")) || [];
 };
-
+// AGREGAR PELICULAS O SERIES AL LS
 export const agregarPeliculasOSeriesALS = (nuevaPOS) => {
   const pOS = obtenerPeliculasOSeriesDeLS();
 
@@ -14,6 +14,19 @@ export const agregarPeliculasOSeriesALS = (nuevaPOS) => {
   localStorage.setItem("peliculasSeries", JSON.stringify(pOS));
 };
 
+// AGREGA CATEGORIAS AL FORM DE PELICULAS O SERIES
+
+// LLAMO LAS CATEGORIAS GUARDADAS EN EL LS
+const categorias = obtenerCategoriaDeLS();
+// SELECCIONO EL ELEMENTO EN HTM
+const selectCategoria = document.getElementById("categoria");
+// LLENA EL CAMPO DE SELECCION CON LAS CATEGORIAS
+categorias.forEach((categoria) => {
+  const option = document.createElement("option");
+  option.value = categoria.codigo; // Asigna el valor del campo según tu estructura de categorías
+  option.textContent = categoria.nombre; // Asigna el nombre de la categoría
+  selectCategoria.appendChild(option);
+});
 
 
 export const crearFilaTabla = (peliculaOSerie, indice) => {
@@ -37,6 +50,7 @@ export const crearFilaTabla = (peliculaOSerie, indice) => {
   const tdNombre = document.createElement("td");
   tdNombre.innerText = peliculaOSerie.nombre;
   tr.appendChild(tdNombre);
+
   // tipo
   const tdTipo = document.createElement("td");
   tdTipo.innerText = peliculaOSerie.tipo;
@@ -52,8 +66,13 @@ export const crearFilaTabla = (peliculaOSerie, indice) => {
   // publicada
   const tdpublicada = document.createElement("td");
   tdpublicada.innerText = peliculaOSerie.publicada;
+  
   tr.appendChild(tdpublicada);
-
+// 
+const tdCategoria = document.createElement("td");
+  const categoria = categorias.find((cat) => cat.codigo === peliculaOSerie.categoria);
+  tdCategoria.innerText = categoria ? categoria.nombre : "Sin categoría"; // Si la categoría no se encuentra, muestra "Sin categoría"
+  tr.appendChild(tdCategoria);
   // botones
   // botones
   const tdBotones = document.createElement("td");
@@ -121,7 +140,7 @@ const prepararEdicionDePOS = (codigo) => {
     campoPublicada.value = peliculaOSerieSeleccionada.publicada
     campoCaratula.value = peliculaOSerieSeleccionada.caratula
     campoDescripcion.value = peliculaOSerieSeleccionada.descripcion
-
+    selectCategoria.value = peliculaOSerieSeleccionada.categoria;
     // guardar codigo
 
     sessionStorage.setItem("codigoPeliculaOSerie",codigo)
@@ -137,7 +156,6 @@ export const estaEditando = () =>{
     return true;
   }
 }
-
 
 
 
