@@ -35,7 +35,7 @@ formLogin.addEventListener('submit', (e) => {
                 imageWidth: 400,
                 imageHeight: 200,
                 imageAlt: 'star+ image',
-                timer: 3700,
+                timer: 1800,
                 timerProgressBar: true,
                 showConfirmButton: false,
                 background: '#f9f9f9',
