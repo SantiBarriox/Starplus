@@ -31,7 +31,6 @@ export const validarDuracion = (valor,campoDuracion) =>{
 }
 
 
-
 export const validarCaratula = (valor,campoCaratula) =>{
     if(valor.trim().length <= 4 || valor.trim().length >= 500) {
         campoCaratula.classList.remove("is-valid");

@@ -14,14 +14,10 @@ agregarPeliculasOSeriesALS(nuevaPOS);
     })
 };
 
- 
-
 
 export const editarPeliculasSeries = (nombre, tipo, duracion, caratula, descripcion, publicada) =>{
-    // traer lista y el codigo 
 const codigo = sessionStorage.getItem("codigoPeliculaOSerie")
 const peliculaOSerie = obtenerPeliculasOSeriesDeLS();
-// si no hay codigo es null
 if(!codigo){
     swal.fire({
         title: "Error",
@@ -30,7 +26,6 @@ if(!codigo){
     })
     return;
 } 
-// bucar pelicula
 const posicionpeliculaOSerie = peliculaOSerie.findIndex(
     (item)=>item.codigo === codigo
     );
@@ -41,11 +36,8 @@ if(posicionpeliculaOSerie === -1){
         icon: "Error",
     })
 }
-// crear el editado
 const pelicilaOSerieEditada = new PeliculaSeries(nombre,tipo,duracion,caratula,descripcion,publicada)
-// eliminar el anterior y agregar el nuevo
 peliculaOSerie.splice(posicionpeliculaOSerie,1,pelicilaOSerieEditada)
-// guardar en el ls
 
 localStorage.setItem("peliculasSeries", JSON.stringify(peliculaOSerie))
 swal.fire({
@@ -54,14 +46,11 @@ swal.fire({
     icon: "success",
 })
 
-// resetear estado previo a edicion
-
 sessionStorage.removeItem("codigoPeliculaOSerie")
 }
 
 
 export const eliminarPeliculasSerie = (codigo) => {
-//    confirmar
 swal
 .fire({
     title:"¿Estas seguro?",
@@ -74,7 +63,6 @@ swal
     .then((action)=>{
         if(action.isConfirmed){
             
-            // trer lista
             const peliculaOSerie = obtenerPeliculasOSeriesDeLS();
 
             const listaFiltrada = peliculaOSerie.filter(
@@ -87,14 +75,11 @@ swal
                     text:"Se elimino con exito",
                     icon: "success",
                 })
-                // recargar tabla
                 cargarTabla();
 
         } 
     });
 }
-
-// detacar peliculas
 
 export const destacarPeliculasSerie = (codigo)=>{
  const peliculaOSerie = obtenerPeliculasOSeriesDeLS()
@@ -113,13 +98,11 @@ export const destacarPeliculasSerie = (codigo)=>{
   localStorage.setItem("peliculaOSerie", JSON.stringify(peliculaOSerie));
   swal
 .fire({
-    title:"Exito",
-    text:"Se destaco la pelicula",
+    title:"Éxito",
+    text:"Se destacó la película/serie",
     icon:"success",
     })
 }
-
-// muestra la pelicula
 
 const mostrarPeliculaDestacada = (codigo) => {
 

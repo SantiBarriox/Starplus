@@ -1,9 +1,8 @@
 import { eliminarCategorias } from "./abmCategoria.js";
 
 export const obtenerCategoriaDeLS = ()=>{
-    return JSON.parse(localStorage.getItem("categorias")) ||[];
+    return JSON.parse(localStorage.getItem("categorias")) || [];
 }
-
 
 export const agregarCategoriaALS = (nuevaCategoria)=>{
     const categorias = obtenerCategoriaDeLS()
@@ -15,24 +14,24 @@ export const agregarCategoriaALS = (nuevaCategoria)=>{
 export const crearFilaTablaCat = (categoria,indice) =>{
     const tbody =document.getElementById("tbody-categoria")
     const tr = document.createElement("tr")
-// indice
 const  tdIndice = document.createElement("td")
+
 tdIndice.innerText = indice;
 tr.appendChild(tdIndice)
-// nombre
-const tdNombre = document.createElement("td");
+
+  const tdNombre = document.createElement("td");
   tdNombre.innerText = categoria.nombre;
   tr.appendChild(tdNombre);
-//   
-const tdBotones = document.createElement("td");
+
+  const tdBotones = document.createElement("td");
   const btnEditar = document.createElement("button");
   const btnEliminar = document.createElement("button");
 
   btnEditar.type = "button";
   btnEliminar.type = "button";
 
-  btnEditar.classList.add("btn", "btn-warning", "btn-sm", "me-2");
-  btnEliminar.classList.add("btn", "btn-danger", "btn-sm", "me-2");
+  btnEditar.classList.add("btn", "btn-sm", "me-2", "btn-editar-categorias");
+  btnEliminar.classList.add("btn", "btn-sm", "me-2", "btn-eliminar-categorias");
   
   btnEditar.innerText = "Editar";
   btnEliminar.innerText = "Eliminar";
@@ -66,21 +65,13 @@ tbody.innerHTML ="";
     })
 }
 
-
-
 export const prepararEdicionDeCat = (codigo) => {
-    // traer la lista
     const categoria = obtenerCategoriaDeLS();
-    // bucar pelicila o serie
     const categoriaSeleccionada = categoria.find((item) => item.codigo === codigo);
     
-      // seleccionar los campos
       const campoCategoria = document.getElementById("input-categoria");
-     
-  //  cargar los datos el el formulario
-  
+       
       campoCategoria.value = categoriaSeleccionada.nombre
-      // guardar codigo
   
       sessionStorage.setItem("codigoCategoria",codigo)
   };

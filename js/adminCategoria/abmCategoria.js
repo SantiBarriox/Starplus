@@ -7,23 +7,16 @@ export const añadirCategorias = (nombre)=>{
     agregarCategoriaALS(nuevaCategoria)
 
     swal.fire({
-        title:"Exito",
-        text:"Categoria agregada",
+        title:"Éxito",
+        text:"La categoría ha sido agregada",
         icon:"success",
     })
-  
 }
 
-
-
-
-
 export const editarCategorias = (nombre) => {
-    // traer lista y el codigo 
     const codigo = sessionStorage.getItem("codigoCategoria")
     const categorias = obtenerCategoriaDeLS();
     
-    // si no hay codigo es null
     if (!codigo) {
         swal.fire({
             title: "Error",
@@ -33,7 +26,6 @@ export const editarCategorias = (nombre) => {
         return;
     } 
     
-    // buscar la categoría a editar
     const posicionCategoria = categorias.findIndex((item) => item.codigo === codigo);
     
     if (posicionCategoria === -1) {
@@ -45,13 +37,10 @@ export const editarCategorias = (nombre) => {
         return;
     }
     
-    // Crear la categoría editada
     const categoriaEditada = new Categorias(nombre);
     
-    // Eliminar la categoría anterior y agregar la nueva
     categorias.splice(posicionCategoria, 1, categoriaEditada);
     
-    // Guardar en el localStorage
     localStorage.setItem("categorias", JSON.stringify(categorias));
     tablaCat();
     swal.fire({
@@ -60,31 +49,23 @@ export const editarCategorias = (nombre) => {
         icon: "success",
     });
     
-    // Resetear estado previo a edición
     sessionStorage.removeItem("codigoCategoria");
 };
 
 
-
-
-
-
-
 export const eliminarCategorias = (codigo) => {
-    //    confirmar
     swal
     .fire({
-        title:"¿Estas seguro?",
+        title:"¿Estás seguro?",
         text:"Esta opción no será reversible",
         icon:"warning",
         showCancelButton: true,
         cancelButtonText:"Cancelar",
-        confirmButtonText:"Si, eliminar",
+        confirmButtonText:"Sí, eliminar",
         })
         .then((action)=>{
             if(action.isConfirmed){
                 
-                // trer lista
                 const categorias = obtenerCategoriaDeLS();
     
                 const listaFiltrada = categorias.filter(
@@ -93,11 +74,10 @@ export const eliminarCategorias = (codigo) => {
                     localStorage.setItem("categorias", JSON.stringify(listaFiltrada))
     
                     swal.fire({
-                        title: "Exito",
-                        text:"Se elimino con exito",
+                        title: "Éxito",
+                        text:"La categoría se ha eliminado",
                         icon: "success",
                     })
-                    // recargar tabla
                     tablaCat()
     
             } 
