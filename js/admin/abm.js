@@ -2,8 +2,8 @@ import { PeliculaSeries } from "./PeliculasSeries.js";
 import { agregarPeliculasOSeriesALS, cargarTabla, obtenerPeliculasOSeriesDeLS } from "./adminUtils.js";
 
 
-export const añadirPeliculasSerie = (nombre, tipo, duracion, caratula, descripcion, publicada) =>{
-    const nuevaPOS = new PeliculaSeries (nombre, tipo, duracion, caratula, descripcion, publicada)
+export const añadirPeliculasSerie = (nombre, tipo, duracion, caratula, descripcion, publicada,categoria) =>{
+    const nuevaPOS = new PeliculaSeries (nombre, tipo, duracion, caratula, descripcion, publicada, categoria)
 
 agregarPeliculasOSeriesALS(nuevaPOS);
 
