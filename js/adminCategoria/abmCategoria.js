@@ -79,7 +79,6 @@ export const eliminarCategorias = (codigo) => {
                         icon: "success",
                     })
                     tablaCat()
-    
             } 
         });
     }
