@@ -1,16 +1,8 @@
 'use strict'
 
-import { añadirContacto, editarContacto } from "./abmReg.js";
-import { cargarTabla, estaEditando } from "./registerUtils.js";
+import { añadirContacto } from "./abmReg.js";
 import { validarContrasenia, validarEmail, validarNombre } from "./validatorsReg.js";
 
-
-const estaLogueado = JSON.parse(sessionStorage.getItem('estaLogueado'));
-if (!estaLogueado){
-    window.location.href = '../pages/login.html';
-}
-
-cargarTabla();
 
 const form = document.getElementById('form-contacto');
 const campoNombre = document.getElementById('input-nombre');
@@ -48,17 +40,9 @@ const contrasenia = campoContrasenia.value;
 const email = campoEmail.value;
 
 
-if (validarNombre(nombre,campoNombre) && validarCelular(contrasenia,campoContrasenia) && validarEmail(email,campoEmail)){
+if (validarNombre(nombre,campoNombre) && validarContrasenia(contrasenia,campoContrasenia) && validarEmail(email,campoEmail)){
 
-    if (estaEditando()){
-        editarContacto(nombre,contrasenia,email);
-    } else {
-        añadirContacto(nombre,contrasenia,email);
-    }
-
-    cargarTabla();
-    
-    form.reset();
+    añadirContacto(nombre,contrasenia,email);
 
     campoNombre.classList.remove('is-valid','is-invalid');
     campoContrasenia.classList.remove('is-valid','is-invalid');
