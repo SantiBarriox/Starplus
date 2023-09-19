@@ -48,5 +48,8 @@ if (validarNombre(nombre,campoNombre) && validarContrasenia(contrasenia,campoCon
     campoContrasenia.classList.remove('is-valid','is-invalid');
     campoEmail.classList.remove('is-valid','is-invalid');
 }
+
+form.reset();
+
 });
 
