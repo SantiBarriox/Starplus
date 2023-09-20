@@ -1,0 +1,82 @@
+body{
+    background: #090b13;
+}
+
+.imgLogo {
+    width: 100px;
+}
+
+#btnIniciarSesion {
+    background-color: #4e4a59;
+}
+
+
+#btnInicSuscripcion{
+    background-color: #fc3c36;
+}
+
+.imgTitulo{
+    position: absolute;
+    margin-top: 70px;
+    margin-left: 10px;
+    width: 300px;
+}
+
+
+.planes {
+    background: #090b13;
+}
+
+.logoDeStar {
+    background: #090b13;
+}
+
+.btnCardSuscripcion {
+    background: #6421ff;
+}
+
+
+.imgFondo{
+    background: #230a5efb;
+    
+}
+
+.footerLista {
+    list-style: none;
+    
+}
+
+.footerLista a {
+    text-decoration: none;
+    margin: 0 10px;
+    color: #ffff;
+}
+
+.acordeonColor {
+    background: #35313f;
+}
+
+@media (max-width:576px){
+    .imgTitulo{
+        display: none;
+        
+       
+    }
+}
+@media (min-width:768px){
+    .imgTitulo{
+        margin-top: 100px;
+        width: 400px;
+       
+    }
+}
+
+
+@media (min-width:1200px){
+    .imgTitulo{
+        margin-top: 100px;
+        margin-left: 40px;
+        width: 500px;
+       
+    }
+}
