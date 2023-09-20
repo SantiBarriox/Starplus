@@ -20,7 +20,6 @@ body{
 #boton-salir{
     background: #4e4a59;;
     color: #f9f9f9;
-    border-radius: 8%;
     font-size: 110%;
 }
 
@@ -54,8 +53,6 @@ body{
 
 .imgTitulo{
     position: absolute;
-    margin-top: 70px;
-    margin-left: 10px;
     width: 300px;
 }
 
