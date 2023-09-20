@@ -1,8 +1,37 @@
-
 body{
-    background: #090b13;
+  background-color: #090b13;
 }
-.imgLogo {
+section{
+    display: flex;
+    width: 600px;
+    height: 430px;
+    margin-top: 2%;
+  }
+  section img{
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+  }
+  section img:hover{
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+  }
+  .texto{
+    color: white;;
+    font-family: fuente Avenir;
+    text-align: center;
+    margin-top: 2%;
+  }
+  @font-face {
+    font-family: fuente Avenir;
+    src: url(../assets/Avenir-Disney.rar);
+  }
+
+  .imgLogo {
     width: 100px;
 }
 
@@ -10,47 +39,21 @@ body{
     background-color: #4e4a59;
 }
 
+
 #btnInicSuscripcion{
     background-color: #fc3c36;
 }
 
-#boton-salir{
-    background: #4e4a59;;
-    color: #f9f9f9;
-    font-size: 110%;
-}
-
-.btn-guardar-categorias{
-    background: linear-gradient(82deg,#e1054a 19%,#ce4100);
-    color: #f9f9f9;
-    border-radius: 8%;
-    font-size: 110%;
-}
-
-.btn-editar-categorias{
-    background: #4e4a59;
-    color: #f9f9f9;
-    border-radius: 8%;
-    font-size: 110%;
-    &:hover{
-    background-color: #4e4a59;
-    }
-}
-
-.btn-eliminar-categorias{
-    background: #e1054a;
-    color: #f9f9f9;
-    border-radius: 8%;
-    font-size: 110%;
-    &:hover{
-        background-color: #e1054a;
-        color: #090b13;
-        }
-}
-
 .imgTitulo{
     position: absolute;
+    margin-top: 70px;
+    margin-left: 10px;
     width: 300px;
+}
+
+
+.planes {
+    background: #090b13;
 }
 
 .logoDeStar {
@@ -60,6 +63,7 @@ body{
 .btnCardSuscripcion {
     background: #6421ff;
 }
+
 
 .imgFondo{
     background: #230a5efb;
@@ -95,6 +99,7 @@ body{
        
     }
 }
+
 
 @media (min-width:1200px){
     .imgTitulo{
