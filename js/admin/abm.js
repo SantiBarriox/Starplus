@@ -15,7 +15,7 @@ agregarPeliculasOSeriesALS(nuevaPOS);
 };
 
 
-export const editarPeliculasSeries = (nombre, tipo, duracion, caratula, descripcion, publicada) =>{
+export const editarPeliculasSeries = (nombre, tipo, duracion, caratula, descripcion, publicada,categoria) =>{
 const codigo = sessionStorage.getItem("codigoPeliculaOSerie")
 const peliculaOSerie = obtenerPeliculasOSeriesDeLS();
 if(!codigo){
@@ -36,7 +36,7 @@ if(posicionpeliculaOSerie === -1){
         icon: "Error",
     })
 }
-const pelicilaOSerieEditada = new PeliculaSeries(nombre,tipo,duracion,caratula,descripcion,publicada)
+const pelicilaOSerieEditada = new PeliculaSeries(nombre,tipo,duracion,caratula,descripcion,publicada,categoria)
 peliculaOSerie.splice(posicionpeliculaOSerie,1,pelicilaOSerieEditada)
 
 localStorage.setItem("peliculasSeries", JSON.stringify(peliculaOSerie))

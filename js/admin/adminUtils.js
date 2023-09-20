@@ -129,6 +129,7 @@ const prepararEdicionDePOS = (codigo) => {
     const campoPublicada = document.getElementById("input-publicada");
     const campoCaratula = document.getElementById("input-caratula");
     const campoDescripcion = document.getElementById("input-descripcion");
+   const selectCategoria = document.getElementById("categoria")
 
     campoNombre.value = peliculaOSerieSeleccionada.nombre
     campoTipo.value = peliculaOSerieSeleccionada.tipo
@@ -136,7 +137,7 @@ const prepararEdicionDePOS = (codigo) => {
     campoPublicada.value = peliculaOSerieSeleccionada.publicada
     campoCaratula.value = peliculaOSerieSeleccionada.caratula
     campoDescripcion.value = peliculaOSerieSeleccionada.descripcion
-    selectCategoria.value = peliculaOSerieSeleccionada.categoria;
+    selectCategoria.value = peliculaOSerieSeleccionada.categoria
 
     sessionStorage.setItem("codigoPeliculaOSerie",codigo)
 };

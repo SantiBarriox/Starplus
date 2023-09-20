@@ -19,6 +19,7 @@ const campoDuracion = document.getElementById("input-duracion");
 const campoPublicada = document.getElementById("input-publicada");
 const campoCaratula = document.getElementById("input-caratula");
 const campoDescripcion = document.getElementById("input-descripcion");
+const selectCategoria = document.getElementById("categoria")
 
 
 campoNombre.addEventListener("blur",(e)=>{
@@ -74,6 +75,7 @@ form.addEventListener("submit", (e)=>{
       const publicada = campoPublicada.value;
       const caratula = campoCaratula.value;
       const descripcion = campoDescripcion.value;
+      const categoria = selectCategoria.value;
 
 
        if (validarNombre(nombre, campoNombre) && 
@@ -84,11 +86,11 @@ form.addEventListener("submit", (e)=>{
        validarCaratula(caratula,campoCaratula)) {
 
          if(estaEditando()){
-            editarPeliculasSeries(nombre, tipo, duracion, caratula, descripcion, publicada);  
+            editarPeliculasSeries(nombre,tipo,duracion,caratula,descripcion,tipo,categoria);  
             
          } else {
             
-            añadirPeliculasSerie(nombre, tipo, duracion, caratula, descripcion, publicada);
+            añadirPeliculasSerie(nombre, tipo, duracion, caratula, descripcion, publicada,categoria);
          }
 
             cargarTabla()
