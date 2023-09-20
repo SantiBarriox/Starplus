@@ -86,7 +86,7 @@ form.addEventListener("submit", (e)=>{
        validarCaratula(caratula,campoCaratula)) {
 
          if(estaEditando()){
-            editarPeliculasSeries(nombre,tipo,duracion,caratula,descripcion,tipo,categoria);  
+            editarPeliculasSeries(nombre,tipo,duracion,caratula,descripcion,publicada,categoria);  
             
          } else {
             
