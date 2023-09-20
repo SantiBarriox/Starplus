@@ -7,7 +7,7 @@ import { validarContraseña, validarUsuario } from "./validators.js";
 const estaLogueado = JSON.parse(sessionStorage.getItem("estaLogueado"))
 if(estaLogueado){
 
-    window.location.href = "./admin.html"
+    window.location.href = "./home.html"
 }
 
 
@@ -47,7 +47,7 @@ formLogin.addEventListener("submit", (e) => {
             timerProgressBar:true,
             showConfirmButton:false,
         }).then(()=>{
-            window.location.href = "./admin.html"
+            window.location.href = "./home.html"
         })
 
     } else {
