@@ -1,0 +1,133 @@
+/*General*/
+
+@font-face {
+  font-family: 'Avenir' ;
+  src: url(../assets/fonts/Disney_Avenir_Demi.ttf)
+}
+
+h1, h2 {
+  font-family: 'Avenir';
+}
+
+body{
+  background: #090b13;
+}
+
+
+.nav-link {
+  color: #fff;
+  font-family: 'Avenir';
+  margin-right: 2rem;
+  }
+
+.nav-link:hover {
+    color: #de0611;
+  ;
+}
+  
+.navbar {
+  background-color: #000000;
+}
+
+@media (max-width:768px){
+  .navbar {
+      background-color: transparent;
+  }
+     
+  }
+
+strong {
+  color: #de0611;
+}
+
+strong:hover {
+  color:#cdda91;
+  text-decoration: none;
+}
+
+
+/*Tarjetas */
+
+.card {
+  height: 100%;
+  }
+
+.card .img-fit {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 5px 5px 20px #00000066;
+  transform: translateY(-3%);
+  padding: 2px;
+
+}
+
+.card-body{
+border-color: #090b13;
+text-size-adjust: 1rem;
+background-color: #35313f;
+color: #f9f9f9;
+font-family: 'Avenir';
+font-size: 0.7rem;
+font-weight: 700;
+}
+
+.label-top {
+  position: absolute;
+  background-color: #ec1111;
+  color: #fff;
+  margin: 10px;
+  top: 8px;
+  left: 8px;
+  padding: 5px 10px 5px 10px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+.logo_espn {
+  width:  5rem;
+}
+
+#title_tendencias {
+text-align: center;
+color: #f9f9f9;
+padding: 1rem;
+}
+
+/*Footer */
+.imgLogo {
+  width: 100px;
+}
+
+.footerLista {
+  list-style: none;
+  
+}
+
+.footerLista a {
+  text-decoration: none;
+  margin: 0 10px;
+  color: #ffff;
+}
+
+.acordeonColor {
+  background: #35313f;
+}
+
+
+
+#btnIniciarSesion {
+  background-color: #4e4a59;
+}
+
+
+#btnInicSuscripcion{
+  background-color: #fc3c36;
+}
+
+

@@ -26,13 +26,14 @@
       src="https://kit.fontawesome.com/8d13b22e35.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="/styles/index.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
   </head>
 
   <body>
     <!------------------------- header--------------------------------->
     <header>
       <!------------------------- navbar--------------------------------->
+      
       <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
           <a class="navbar-brand imgLogo" href="./index.html"
@@ -59,7 +60,7 @@
                   class="nav-link active btn text-light m-1"
                   id="btnInicSuscripcion"
                   aria-current="page"
-                  href="./pages/error404.html"
+                  href="./pages/register.html"
                   >SUSCRIBITE AHORA</a
                 >
               </li>
@@ -68,7 +69,7 @@
                   class="nav-link active btn text-light m-1"
                   id="btnIniciarSesion"
                   aria-current="page"
-                  href="./pages/ingresar.html"
+                  href="./pages/login.html"
                   >INICIAR SESIÓN</a
                 >
               </li>
@@ -160,7 +161,7 @@
                   Estrenos de películas, series y eventos deportivos de ESPN. En
                   Star+ hay más de lo que te gusta.
                 </p>
-                <a href="#" class="btn btnCardSuscripcion text-light"
+                <a href="./pages/error404.html" class="btn btnCardSuscripcion text-light"
                   >SUSCRIBITE AHORA</a
                 >
               </div>
@@ -176,11 +177,11 @@
                     alt="imagen de combo"
                   />
                   <h5 class="card-title">ARS 1.999/mes (final)*</h5>
-                  <p class="card-text">
+                  <p class="card-text container">
                     Contratá Disney+ y Star+ juntos. Ahorrá y disfrutá ahora los
                     dos servicios por un precio único.
                   </p>
-                  <a href="#" class="btn btnCardSuscripcion text-light"
+                  <a href="./pages/error404.html" class="btn btnCardSuscripcion text-light"
                     >SUSCRIBITE AHORA</a
                   >
                 </div>
@@ -200,7 +201,7 @@
                   Disfrutá un año de Star+ por un precio promocional. Todo el
                   entretenimiento y tus deportes favoritos, sin límites.
                 </p>
-                <a href="#" class="btn btnCardSuscripcion text-light"
+                <a href="./pages/error404.html" class="btn btnCardSuscripcion text-light"
                   >SUSCRIBITE AHORA</a
                 >
               </div>
@@ -216,9 +217,9 @@
             Estrenos de películas, clásicos, sagas, series exclusivas, comedias
             animadas, producciones originales y deportes en vivo de ESPN
           </p>
-          <img class="w-100" src="./assets/img9.jpg" alt="" />
+          <img class="w-100" src="./assets/img9.jpg" alt="cartelera de series y peliculas" />
         </article>
-      </section>
+      </section>  
       <!-------------------------seccion ESPN--------------------------------->
       <section class="planes my-5">
         <article class="container text-light">
@@ -302,96 +303,60 @@
       </section>
       <!-------------------------seccion Preguntas frecuentes--------------------------------->
       <section class="planes">
-        <article class="container text-center text-light">
-          <h2>Preguntas frecuentes</h2>
-          <div class="" id="accordionPreguntas">
-            <div class="acordeonColor p-2 text-light">
-              <h2 class="accordion-header mb-3">
-                <button
-                  class="accordion-button"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#panelsStayOpen-collapseOne"
-                  aria-expanded="true"
-                  aria-controls="panelsStayOpen-collapseOne"
-                >
+        <article class="container text-light">
+          <h2 class="mb-5 text-center">Preguntas frecuentes</h2>
+          <div class="accordion" id="acordionPreguntas">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button bg-dark text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                   ¿Ya tenés Disney+ o Star+ y querés Combo+?
                 </button>
               </h2>
-              <div
-                id="panelsStayOpen-collapseOne"
-                class="accordion-collapse collapse show"
-              >
-                <div class="accordion-body">
-                  <strong>This is the first item's accordion body.</strong> It
-                  is shown by default, until the collapse plugin adds the
-                  appropriate classes that we use to style each element. These
-                  classes control the overall appearance, as well as the showing
-                  and hiding via CSS transitions. You can modify any of this
-                  with custom CSS or overriding our default variables. It's also
-                  worth noting that just about any HTML can go within the
-                  <code>.accordion-body</code>, though the transition does limit
-                  overflow.
-                </div>
+              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#acordionPreguntas">
+                <div class="accordion-body bg-dark text-light">
+                  <h2>Con Combo+:</h2>
+                  <ul>
+                  <li>Descontaremos el valor de tu suscripción actual del precio de Combo+. (¡Sí, para el plan anual también!).</li>
+                  <li>Si tenés una suscripción mensual, el valor que pagás mensualmente se descontará del precio final de Combo+.</li>
+                  <li>Si tenés una suscripción anual, dividiremos el precio que pagaste en 12 partes iguales y descontaremos ese precio mensualmente del precio final de Combo+.</li>
+                  <li>Te llegará un correo electrónico con el detalle de los cargos apenas confirmes el pago.</li>
+                  <li>Recordá que podés cancelar en cualquier momento.</li>
+                </ul>
               </div>
             </div>
-            <div class="acordeonColor p-2 text-light">
-              <h2 class="accordion-header mb-3">
-                <button
-                  class="accordion-button"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#panelsStayOpen-collapseOne"
-                  aria-expanded="true"
-                  aria-controls="panelsStayOpen-collapseOne"
-                >
-                  ¿Ya tenés Disney+ o Star+ y querés Combo+?
-                </button>
-              </h2>
-              <div
-                id="panelsStayOpen-collapseOne"
-                class="accordion-collapse collapse show"
-              >
-                <div class="accordion-body">
-                  <strong>This is the first item's accordion body.</strong> It
-                  is shown by default, until the collapse plugin adds the
-                  appropriate classes that we use to style each element. These
-                  classes control the overall appearance, as well as the showing
-                  and hiding via CSS transitions. You can modify any of this
-                  with custom CSS or overriding our default variables. It's also
-                  worth noting that just about any HTML can go within the
-                  <code>.accordion-body</code>, though the transition does limit
-                  overflow.
-                </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-dark text-light" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                ¿Ya tenés una suscripción a Disney+?
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#acordionPreguntas">
+              <div class="accordion-body bg-dark text-light">
+                Podés usar tu nombre de usuario y contraseña de Disney+ para suscribirte a Star+ y así conseguir la
+                oferta combinada Combo+. Debés tener 18 años de edad para suscribirte.
               </div>
             </div>
-            <div class="acordeonColor p-2 text-light">
-              <h2 class="accordion-header mb-3">
-                <button
-                  class="accordion-button"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#panelsStayOpen-collapseOne"
-                  aria-expanded="true"
-                  aria-controls="panelsStayOpen-collapseOne"
-                >
-                  ¿Ya tenés Disney+ o Star+ y querés Combo+?
-                </button>
-              </h2>
-              <div
-                id="panelsStayOpen-collapseOne"
-                class="accordion-collapse collapse show"
-              >
-                <div class="accordion-body">
-                  <strong>This is the first item's accordion body.</strong> It
-                  is shown by default, until the collapse plugin adds the
-                  appropriate classes that we use to style each element. These
-                  classes control the overall appearance, as well as the showing
-                  and hiding via CSS transitions. You can modify any of this
-                  with custom CSS or overriding our default variables. It's also
-                  worth noting that just about any HTML can go within the
-                  <code>.accordion-body</code>, though the transition does limit
-                  overflow.
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-dark text-light" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                ¿Qué incluye Star+?
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#acordionPreguntas">
+              <div class="accordion-body bg-dark text-light">
+                <h2>Beneficios de la suscripción a Star+:</h2>
+                <ul>
+                  <li>Experiencia de entretenimiento exclusiva.</li>
+                  <li>Eventos deportivos de ESPN en vivo y con máxima calidad.</li>
+                  <li>Amplia variedad de títulos en 4K.</li>
+                  <li>Descargas hasta en diez dispositivos.</li>
+                  <li>Hasta cuatro pantallas a la vez sin costo adicional: ¡disfrutan todos!</li>
+                  <li>Controles parentales para cuidar a la familia.</li>
+                </ul>
                 </div>
               </div>
             </div>
@@ -410,39 +375,40 @@
           />
         </article>
         <article class="row">
-          <div class="col-12 col-md-3 my-5">
+          <div class="col-12 col-md-3 my-2">
             <ul class="footerLista">
               <li>
-                <a href="#">Término de uso</a>
+                <a href="./pages/error404.html">Término de uso</a>
               </li>
             </ul>
           </div>
-          <div class="col-12 col-md-3 my-5">
+          <div class="col-12 col-md-3 my-2">
             <ul class="footerLista">
               <li>
-                <a href="#">Término de uso</a>
+                <a href="./pages/error404.html">Política de privacidad</a>
               </li>
             </ul>
           </div>
-          <div class="col-12 col-md-3 my-5">
+          <div class="col-12 col-md-3 my-2">
             <ul class="footerLista">
               <li>
-                <a href="#">Ayuda</a>
+                <a href="./pages/error404.html">Ayuda</a>
               </li>
             </ul>
           </div>
-          <div class="col-12 col-md-3 my-5">
+          <div class="col-12 col-md-3 my-2">
             <ul class="footerLista">
               <li>
-                <a href="#">Acerca de Star+</a>
+                <a href="./pages/aboutUs.html">Acerca de Star+</a>
               </li>
             </ul>
           </div>
         </article>
-        <p class="">
+        <p>
           © 2023 Disney y su familia de compañías afiliadas. Todos los derechos
           reservados.
         </p>
+        <p>Star+ es un servicio por suscripción de pago, su contenido está sujeto a disponibilidad. El servicio Star+ es comercializado por The Walt Disney Company (Argentina) S.A., Tucumán 1, Piso 4º (C1049AAA) Ciudad Autónoma de Buenos Aires, Argentina y número de CUIT 30-63984459-1.</p>
       </section>
     </footer>
     <!-- JavaScript Bootstrap-->
@@ -455,21 +421,4 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="module" src="./js/logout.js"></script>
   </body>
-</html>
-<body>
-  <header></header>
-
-  <main>
-  </main>
-
-  <footer></footer>
-
-
-  <!-- JavaScript Bootstrap-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-    crossorigin="anonymous"></script>
-</body>
-</body>
-
 </html>

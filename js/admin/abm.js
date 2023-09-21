@@ -81,29 +81,36 @@ swal
     });
 }
 
-export const destacarPeliculasSerie = (codigo)=>{
- const peliculaOSerie = obtenerPeliculasOSeriesDeLS()
-
- const indexPelicula = peliculaOSerie.findIndex((item)=>{
-    return item.codigo === codigo;
- })
- if (indexPelicula === -1) {
-    console.error("Hubo un error");
-    return;
-  }
-  peliculaOSerie.forEach((_, index) => {
-    peliculaOSerie[index].destacada = false;
-  });
-  peliculaOSerie[indexPelicula].destacada = !peliculaOSerie[indexPelicula].destacada;
-  localStorage.setItem("peliculaOSerie", JSON.stringify(peliculaOSerie));
-  swal
-.fire({
-    title:"Éxito",
-    text:"Se destacó la película/serie",
-    icon:"success",
+export const destacarPeliculasSerie = (codigo) => {
+    const peliculaOSerie = obtenerPeliculasOSeriesDeLS();
+  
+    const indexPelicula = peliculaOSerie.findIndex((item) => {
+      return item.codigo === codigo;
     })
+  
+    if (indexPelicula === -1) {
+      console.error("Hubo un error");
+      return;
+    }
+  
+    const peliculaSeleccionada = peliculaOSerie[indexPelicula];
+    const estabaDestacada = peliculaSeleccionada.destacada;
+    peliculaSeleccionada.destacada = !estabaDestacada;
+  
+    localStorage.setItem("peliculasSeries", JSON.stringify(peliculaOSerie));
+  
+    if (estabaDestacada) {
+      swal.fire({
+        title: "Éxito",
+        text: "Se desdestacó la película/serie",
+        icon: "success",
+      });
+    } else {
+      swal.fire({
+        title: "Éxito",
+        text: "Se quito el destacado de la película/serie",
+        icon: "success",
+      });
+    }
 }
 
-const mostrarPeliculaDestacada = (codigo) => {
-
-}

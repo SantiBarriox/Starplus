@@ -8,28 +8,104 @@
     content="Encuentra algo para todos los gustos. Deportes en vivo, películas icónicas y series originales exclusivas, todo en Star+. Cuando quieras, donde quieras." />
   <meta name="keywords" content="Deportes en vivo, péliculas,series" />
   <meta name="author" content="Grupo 3 - Rolling Code" />
-  <link rel="shortcut icon" href="./assets/faviconStarPlus.png" type="image/x-icon" />
-  <title>Deportes en vivo, películas y series | Star+</title>
-  <!-- CSS Bootstrap-->
+  <link rel="shortcut icon" href="../assets/faviconStarPlus.png" type="image/x-icon" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
   <script src="https://kit.fontawesome.com/8d13b22e35.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="/styles/error404.css" />
+  <link rel="stylesheet" href="../styles/error404.css" />
 </head>
 
 <body>
-  <header></header>
+  <header>
+    <!------------------------- Navbar --------------------------------->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container-fluid">
+        <a id="navbarMenu" class="navbar-brand imgLogo" href="../index.html"><img src="../assets/logo.svg"
+            alt="logo de star +" /></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../index.html">INICIO </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./home.html">PELÍCULAS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./home.html">SERIES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./home.html">DEPORTES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./admin.html"><strong>ADMIN</strong></a>
+            </li>
+          </ul>
+          <div class="collapse navbar-collapse justify-content-end" id="barraNavegacion">
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-  <main></main>
+  <main class="text-center container">
+    <img class="imagen-error p-5 m-5" src="../assets/homeroError.png" alt="Error404 no encontrado">
+    <h2 class="text-light">La página que intentas solicitar no está en el servidor (Error404)</h2>
 
-  <footer></footer>
 
 
-  <!-- JavaScript Bootstrap-->
+  </main>
+  <!-------------------------seccion footer--------------------------------->
+  <footer>
+    <section class="planes container text-light text-center my-5">
+      <article class="text-center">
+        <img src="../assets/logo.svg" alt="Logo de Star+" class="my-5 imgLogo" />
+      </article>
+      <article class="row">
+        <div class="col-12 col-md-3 my-5">
+          <ul class="footerLista">
+            <li>
+              <a href="./error404.html">Pólitica de privacidad</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-3 my-5">
+          <ul class="footerLista">
+            <li>
+              <a href="./error404.html">Término de uso</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-3 my-5">
+          <ul class="footerLista">
+            <li>
+              <a href="./error404.html">Ayuda</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-3 my-5">
+          <ul class="footerLista">
+            <li>
+              <a href="./aboutUs.html">Acerca de Star+</a>
+            </li>
+          </ul>
+        </div>
+      </article>
+      <p>
+        © 2023 Disney y su familia de compañías afiliadas. Todos los derechos
+        reservados.
+      </p>
+      <p>Star+ es un servicio por suscripción de pago, su contenido está sujeto a disponibilidad. El servicio Star+ es
+        comercializado por The Walt Disney Company (Argentina) S.A., Tucumán 1, Piso 4º (C1049AAA) Ciudad Autónoma de
+        Buenos Aires, Argentina y número de CUIT 30-63984459-1.</p>
+    </section>
+  </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
     crossorigin="anonymous"></script>
-</body>
 </body>
 
 </html>
