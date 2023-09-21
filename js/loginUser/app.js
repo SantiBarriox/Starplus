@@ -31,7 +31,7 @@ formLogin.addEventListener('submit', (e) => {
             swal.fire({
                 title: 'BIENVENIDO A STAR+',
                 text: 'Disfruta de nuestra programación',
-                imageUrl: '../assets/starEnter.png',
+                imageUrl: '../assets/starEnter.jpg',
                 imageWidth: 400,
                 imageHeight: 200,
                 imageAlt: 'star+ image',
