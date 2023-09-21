@@ -69,10 +69,10 @@
       <section class="bg-dark p-3 rounded text-light container">
         <form id="form-Peli-Series">
           <fieldset class="mb-2">
-            <label for="input-nombre" class="form-label">Nombre</label>
-            <input type="text" placeholder="Titanic" class="form-control" id="input-nombre" maxlength="100" />
+            <label for="input-nombre" class="form-label">Nombre:</label>
+            <input type="text" placeholder="Ingrese nombre de película/serie" class="form-control" id="input-nombre" />
           <div class="invalid-feedback">
-            Ingrese un nombre valido
+            Ingrese un nombre válido
           </div>
           </fieldset>
           <fieldset class="mb-2">
@@ -90,45 +90,48 @@
           <fieldset class="mb-2">
             <label for="categoria">Categoría:</label>
             <select id="categoria" name="categoria">
+              <option selected>Seleccione categoría</option>  
               <!-- Aquí se llenarán las opciones de categoría dinámicamente -->
             </select>
           </fieldset>
           <fieldset class="mb-2">
-            <label for="input-duracion" class="form-label">Duracion</label>
+            <label for="input-duracion" class="form-label">Duración:</label>
             <input
-              type="text"
-              placeholder="1h 20"
+              type="number"
+              placeholder="Indique duración en minutos"
+              step="1"
+              min="1" max="999"
               class="form-control"
               id="input-duracion"
             />
             <div class="invalid-feedback">
-              Ingrese un tipo valido
+              Ingrese duración válida
             </div>
           </fieldset>
           <fieldset class="mb-2">
-            <label for="input-caratula" class="form-label">Caratura</label>
+            <label for="input-caratula" class="form-label">Carátula:</label>
             <input
               type="text"
-              placeholder="https://google.com"
+              placeholder="Ingrese URL de imagen de carátula"
               class="form-control"
               id="input-caratula"
             />
             <div class="invalid-feedback">
-              Ingrese uns imagen valida
+              Ingrese una URL de imagen válida
             </div>
           </fieldset>
           <fieldset class="mb-2">
-            <label for="input-descripcion" class="form-label">Descripción</label>
+            <label for="input-descripcion" class="form-label">Descripción:</label>
             <input
               type="text"
-              placeholder=""
+              placeholder="Ingrese una breve descripción"
+              maxlength="60"
               class="form-control"
               id="input-descripcion"
             />
             <div class="invalid-feedback">
-              Ingrese una description valida
+              Ingrese una descripción válida
             </div>
-          </fieldset>
           <fieldset class="mb-2">
             <label for="input-publicada" class="form-label">Publicada</label>
             <select id="input-publicada" class="form-select" aria-label="Default select example">
