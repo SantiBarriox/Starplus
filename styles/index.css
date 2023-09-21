@@ -80,9 +80,7 @@ body{
 .acordeonColor {
     background: #35313f;
 }
-#acordionPreguntas:hover{
-    
-}
+
 
 @media (max-width:576px){
     .imgTitulo{
