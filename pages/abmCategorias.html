@@ -25,33 +25,80 @@
       src="https://kit.fontawesome.com/8d13b22e35.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/abmCategorias.css" />
     <link rel="stylesheet" href="../styles/tabla.css" />
   </head>
   <body>
-    <header>
-      <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container-fluid">
-          <a class="navbar-brand imgLogo" href="../index.html"
-            ><img src="../assets/logo.svg" alt="logo de star +"
-          /></a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#barraNavegacion"
-            aria-controls="barraNavegacion"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
+ <!------------------------- Header--------------------------------->
+ <header>
+  <!------------------------- Navbar --------------------------------->
+  <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container-fluid">
+          <a id="navbarMenu" class="navbar-brand imgLogo" href="../index.html"><img src="../assets/logo.svg"
+                  alt="logo de star +" /></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
           </button>
-          <div
-            class="collapse navbar-collapse justify-content-end"
-            id="barraNavegacion"
-          >
-            <ul class="navbar-nav mb-2 mb-lg-0">
-              <li class="nav-item ms-md-auto">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="../index.html">INICIO </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="./home.html">PELÍCULAS</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="./home.html">SERIES</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="./home.html">DEPORTES</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="./admin.html"><strong>ADMIN</strong></a>
+                  </li>
+              </ul>
+              <div class="collapse navbar-collapse justify-content-end" id="barraNavegacion">
+
+              </div>
+          </div>
+  </nav>
+<!------------------------- Header--------------------------------->
+<header>
+  <!------------------------- Navbar --------------------------------->
+  <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container-fluid">
+          <a id="navbarMenu" class="navbar-brand imgLogo" href="../index.html"><img src="../assets/logo.svg"
+                  alt="logo de star +" /></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="../index.html">INICIO </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="./home.html">PELÍCULAS</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="./home.html">SERIES</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="./home.html">DEPORTES</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="./admin.html"><strong>ADMIN</strong></a>
+                  </li>
+              </ul>
+          
+          </div>
+  </nav>
+</header>
                 <button class="nav-link text-danger d-none" id="boton-salir">
                   Salir
                 </button>
@@ -61,6 +108,7 @@
         </div>
       </nav>
     </header>
+    
     <main class="container mt-5 col-md-6">
       <h1 class="text-center text-light my-5">Categorías</h1>
       <hr>
@@ -104,31 +152,35 @@
           />
         </article>
         <article class="row">
-          <div class="col-12 col-md-3 my-5">
+          <div class="col-12 col-md-3 my-2">
             <ul class="footerLista">
               <li>
+<<<<<<< HEAD
                 <a href="./error404.html">Pólitica de privacidad</a>
+=======
+                <a href="../pages/error404.html">Término de uso</a>
+>>>>>>> dfe3753240187a7a1212fcd95a0404e5b329e0d6
               </li>
             </ul>
           </div>
-          <div class="col-12 col-md-3 my-5">
+          <div class="col-12 col-md-3 my-2">
             <ul class="footerLista">
               <li>
-                <a href="./error404.html">Término de uso</a>
+                <a href="../pages/error404.html">Política de privacidad</a>
               </li>
             </ul>
           </div>
-          <div class="col-12 col-md-3 my-5">
+          <div class="col-12 col-md-3 my-2">
             <ul class="footerLista">
               <li>
-                <a href="./error404.html">Ayuda</a>
+                <a href="../pages/error404.html">Ayuda</a>
               </li>
             </ul>
           </div>
-          <div class="col-12 col-md-3 my-5">
+          <div class="col-12 col-md-3 my-2">
             <ul class="footerLista">
               <li>
-                <a href="./error404.html">Acerca de Star+</a>
+                <a href="../pages/aboutUs.html">Acerca de Star+</a>
               </li>
             </ul>
           </div>
@@ -137,6 +189,7 @@
           © 2023 Disney y su familia de compañías afiliadas. Todos los derechos
           reservados.
         </p>
+        <p>Star+ es un servicio por suscripción de pago, su contenido está sujeto a disponibilidad. El servicio Star+ es comercializado por The Walt Disney Company (Argentina) S.A., Tucumán 1, Piso 4º (C1049AAA) Ciudad Autónoma de Buenos Aires, Argentina y número de CUIT 30-63984459-1.</p>
       </section>
     </footer>
     <script

@@ -14,6 +14,36 @@ body{
 }
 
 
+.nav-link {
+  color: #fff;
+  font-family: 'Avenir';
+  margin-right: 2rem;
+  }
+
+.nav-link:hover {
+    color: #de0611;
+  ;
+}
+  
+.navbar {
+  background-color: #000000;
+}
+
+@media (max-width:768px){
+  .navbar {
+      background-color: transparent;
+  }
+     
+  }
+
+strong {
+  color: #de0611;
+}
+
+strong:hover {
+  color:#cdda91;
+  text-decoration: none;
+}
 
 
 /*Tarjetas */

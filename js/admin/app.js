@@ -1,6 +1,6 @@
 import { añadirPeliculasSerie, editarPeliculasSeries } from "./abm.js";
 import { cargarTabla, estaEditando } from "./adminUtils.js";
-import { validartipo, validarCaratula, validarDescripcion, validarNombre, validarPublicada, validarDuracion } from "./validators.js";
+import { validartipo, validarCaratula, validarDescripcion, validarNombre, validarPublicada, validarDuracion, validarCategoria } from "./validators.js";
 
 const estaLogueado = JSON.parse(sessionStorage.getItem("estaLogueado"))
 if(!estaLogueado){
@@ -64,7 +64,10 @@ campoDescripcion.addEventListener("blur",(e)=>{
  validarDescripcion(valor, campoDescripcion)
    
 });
-
+selectCategoria.addEventListener('blur', (e) => {
+   const value = e.target.value;
+   validarCategoria(value, selectCategoria)
+})
 
 form.addEventListener("submit", (e)=>{
        e.preventDefault();

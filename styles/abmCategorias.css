@@ -1,29 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
 @font-face {
     font-family: 'Avenir' ;
     src: url(../assets/fonts/Disney_Avenir_Demi.ttf)
   }
 
+ #boton-salir {
+    color:#e7d211
+
+ }
+
 
 body{
     background: #090b13;
-}
-
-.a-suscribirse{
-    color: #fc3c36;
-}
-
-.imgLogo {
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    object-fit: cover;
-}
-.imgLogoHeader {
-    width: 20%;
-    height: 20%;
-    margin: 5%;
-    display: flex;
-    justify-content: center;
 }
 
 .imgLogo {
@@ -39,10 +32,6 @@ body{
     background-color: #fc3c36;
 }
 
-#btnSalir{
-    background-color: #4e4a59;
-}
-
 .imgTitulo{
     position: absolute;
     margin-top: 70px;
@@ -50,16 +39,32 @@ body{
     width: 300px;
 }
 
-.btn-iniciar-sesion{
-    background: linear-gradient(82deg,#e1054a 19%,#ce4100);
+
+@media (max-width:576px){
+    .imgTitulo{
+        display: none;
+        
+       
+    }
+}
+@media (min-width:768px){
+    .imgTitulo{
+        margin-top: 100px;
+        width: 400px;
+       
+    }
 }
 
-.btn-continuar{
-    background: linear-gradient(82deg,#e1054a 19%,#ce4100);
-    color: #f9f9f9;
-    border-radius: 8%;
-    font-size: 110%;
+
+@media (min-width:1200px){
+    .imgTitulo{
+        margin-top: 100px;
+        margin-left: 40px;
+        width: 500px;
+       
+    }
 }
+
 
 .planes {
     background: #090b13;
@@ -73,9 +78,9 @@ body{
     background: #6421ff;
 }
 
-.logocombo{
+/* .logocombo{
     background: #090b13;
-}
+} */
 
 .imgFondo{
     background: #230a5efb;
@@ -109,7 +114,11 @@ body{
     ;
 }
     
-  
+
+
+
+
+    
 
 .navbar {
     background-color: #000000;
