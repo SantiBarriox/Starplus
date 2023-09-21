@@ -52,4 +52,3 @@ if (validarNombre(nombre,campoNombre) && validarContrasenia(contrasenia,campoCon
 form.reset();
 
 });
-

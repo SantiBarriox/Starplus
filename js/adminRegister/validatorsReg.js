@@ -55,4 +55,3 @@ export const validarNombre = (value,campoNombre) => {
     campoEmail.classList.add('is-valid');
         return true;
     } 
-    
