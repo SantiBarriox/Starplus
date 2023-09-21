@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-@font-face {
-  font-family: fuente Avenir;
-  src: url(../assets/Avenir-Disney.rar);
-}
-
-=======
-  
 @font-face {
     font-family: 'Avenir' ;
     src: url(../assets/fonts/Disney_Avenir_Demi.ttf)
@@ -88,10 +80,6 @@ body{
     background: #6421ff;
 }
 
-/* .logocombo{
-    background: #090b13;
-} */
-
 .imgFondo{
     background: #230a5efb;
     
@@ -143,8 +131,6 @@ strong:hover {
 }
 
 
-
->>>>>>> dfe3753240187a7a1212fcd95a0404e5b329e0d6
 body{
   background-color: #090b13;
 }
@@ -174,13 +160,6 @@ section{
     text-align: center;
     margin-top: 2%;
   }
-<<<<<<< HEAD
-=======
-  @font-face {
-    font-family: fuente 'Avenir';
-    src: url(../assets/Avenir-Disney.rar);
-  }
->>>>>>> dfe3753240187a7a1212fcd95a0404e5b329e0d6
 
   .imgLogo {
     width: 100px;
@@ -235,8 +214,6 @@ section{
 .acordeonColor {
     background: #35313f;
 }
-<<<<<<< HEAD
-=======
 
 @media (max-width:576px){
     .imgTitulo{
@@ -262,7 +239,3 @@ section{
        
     }
 }
-
-
-
->>>>>>> dfe3753240187a7a1212fcd95a0404e5b329e0d6
