@@ -18,9 +18,10 @@ export const agregarPeliculasOSeriesALS = (nuevaPOS) => {
 const categorias = obtenerCategoriaDeLS();
 
 const selectCategoria = document.getElementById("categoria");
-
+selectCategoria.classList.add("form-select");
 categorias.forEach((categoria) => {
   const option = document.createElement("option");
+  
   option.value = categoria.codigo;
   option.textContent = categoria.nombre; 
   selectCategoria.appendChild(option);
