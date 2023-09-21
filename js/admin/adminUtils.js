@@ -6,12 +6,23 @@ export const obtenerPeliculasOSeriesDeLS = () => {
   return JSON.parse(localStorage.getItem("peliculasSeries")) || [];
 };
 
+
 export const agregarPeliculasOSeriesALS = (nuevaPOS) => {
   const pOS = obtenerPeliculasOSeriesDeLS();
 
   pOS.push(nuevaPOS);
 
   localStorage.setItem("peliculasSeries", JSON.stringify(pOS));
+};
+export const actualizarDestacadaEnLS = (codigo, destacada) => {
+  const peliculasOSeries = obtenerPeliculasOSeriesDeLS();
+
+  const peliculaOSerieIndex = peliculasOSeries.findIndex((pos) => pos.codigo === codigo);
+
+  if (peliculaOSerieIndex !== -1) {
+    peliculasOSeries[peliculaOSerieIndex].destacada = destacada;
+    localStorage.setItem("peliculasSeries", JSON.stringify(peliculasOSeries));
+  }
 };
 
 
@@ -95,13 +106,18 @@ export const crearFilaTabla = (peliculaOSerie, indice) => {
     eliminarPeliculasSerie(peliculaOSerie.codigo);
   };
   btnDestacar.onclick = () => {
-    if (peliculaOSerie.destacada) {
+    const estaDestacada = peliculaOSerie.destacada;
+    
+    if (estaDestacada) {
       tr.classList.remove("pelicula-destacada");
     } else {
       tr.classList.add("pelicula-destacada");
     }
+    
+    actualizarDestacadaEnLS(peliculaOSerie.codigo, !estaDestacada);
     destacarPeliculasSerie(peliculaOSerie.codigo);
   };
+  
   tdBotones.appendChild(btnEditar);
   tdBotones.appendChild(btnEliminar);
   tdBotones.appendChild(btnDestacar);
