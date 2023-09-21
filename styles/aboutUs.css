@@ -2,13 +2,11 @@
     font-family: 'Avenir' ;
     src: url(../assets/fonts/Disney_Avenir_Demi.ttf)
   }
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
 
  #boton-salir {
@@ -41,31 +39,6 @@ body{
     width: 300px;
 }
 
-
-@media (max-width:576px){
-    .imgTitulo{
-        display: none;
-        
-       
-    }
-}
-@media (min-width:768px){
-    .imgTitulo{
-        margin-top: 100px;
-        width: 400px;
-       
-    }
-}
-
-
-@media (min-width:1200px){
-    .imgTitulo{
-        margin-top: 100px;
-        margin-left: 40px;
-        width: 500px;
-       
-    }
-}
 
 
 .planes {
@@ -112,15 +85,6 @@ body{
     ;
 }
     
-
-
-@media (max-width:768px){
-    .navbar {
-        background-color: transparent;
-    }
-       
-    }
-
 strong {
     color: #de0611;
 }
@@ -182,10 +146,6 @@ section{
 }
 
 
-.planes {
-    background: #090b13;
-}
-
 .logoDeStar {
     background: #090b13;
 }
@@ -214,6 +174,15 @@ section{
 .acordeonColor {
     background: #35313f;
 }
+
+
+@media (max-width:768px){
+    .navbar {
+        background-color: transparent;
+    }
+       
+    }
+
 
 @media (max-width:576px){
     .imgTitulo{
