@@ -5,7 +5,7 @@ import { validartipo, validarCaratula, validarDescripcion, validarNombre, valida
 const estaLogueado = JSON.parse(sessionStorage.getItem("estaLogueado"))
 if(!estaLogueado){
 
-    window.location.href = "./ingresar.html"
+    window.location.href = "../pages/login.html"
 }
 
 
