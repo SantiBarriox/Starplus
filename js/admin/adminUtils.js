@@ -32,6 +32,9 @@ export const crearFilaTabla = (peliculaOSerie, indice) => {
   const tbody = document.getElementById("tbody-peli-serie");
 
   const tr = document.createElement("tr");
+  if (peliculaOSerie.destacada) {
+    tr.classList.add("pelicula-destacada");
+  }
 
   const tdIndice = document.createElement("td");
   tdIndice.innerText = indice;
@@ -45,11 +48,9 @@ export const crearFilaTabla = (peliculaOSerie, indice) => {
   tdImagen.appendChild(img);
   tr.appendChild(tdImagen);
 
-
   const tdNombre = document.createElement("td");
   tdNombre.innerText = peliculaOSerie.nombre;
   tr.appendChild(tdNombre);
-
 
   const tdTipo = document.createElement("td");
   tdTipo.innerText = peliculaOSerie.tipo;
@@ -65,14 +66,12 @@ export const crearFilaTabla = (peliculaOSerie, indice) => {
 
   const tdpublicada = document.createElement("td");
   tdpublicada.innerText = peliculaOSerie.publicada;
-  
   tr.appendChild(tdpublicada);
 
   const tdCategoria = document.createElement("td");
   const categoria = categorias.find((cat) => cat.codigo === peliculaOSerie.categoria);
   tdCategoria.innerText = categoria ? categoria.nombre : "Sin categoría";
   tr.appendChild(tdCategoria);
-
 
   const tdBotones = document.createElement("td");
   const btnEditar = document.createElement("button");
@@ -81,7 +80,7 @@ export const crearFilaTabla = (peliculaOSerie, indice) => {
 
   btnEditar.type = "button";
   btnEliminar.type = "button";
-  btnDestacar.type = "button"
+  btnDestacar.type = "button";
   btnEditar.classList.add("btn", "btn-warning", "btn-sm", "me-2");
   btnEliminar.classList.add("btn", "btn-danger", "btn-sm", "me-2");
   btnDestacar.classList.add("btn", "btn-danger", "btn-sm");
@@ -93,11 +92,16 @@ export const crearFilaTabla = (peliculaOSerie, indice) => {
     prepararEdicionDePOS(peliculaOSerie.codigo);
   };
   btnEliminar.onclick = () => {
-    eliminarPeliculasSerie(peliculaOSerie.codigo)
+    eliminarPeliculasSerie(peliculaOSerie.codigo);
   };
   btnDestacar.onclick = () => {
-    destacarPeliculasSerie(peliculaOSerie.codigo)
-  }
+    if (peliculaOSerie.destacada) {
+      tr.classList.remove("pelicula-destacada");
+    } else {
+      tr.classList.add("pelicula-destacada");
+    }
+    destacarPeliculasSerie(peliculaOSerie.codigo);
+  };
   tdBotones.appendChild(btnEditar);
   tdBotones.appendChild(btnEliminar);
   tdBotones.appendChild(btnDestacar);
@@ -153,6 +157,8 @@ export const estaEditando = () =>{
     return true;
   }
 }
+
+
 
 
 
