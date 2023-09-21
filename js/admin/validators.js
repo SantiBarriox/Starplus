@@ -1,3 +1,5 @@
+import { obtenerCategoriaDeLS } from "../adminCategoria/adminUtils.js";
+
 export const validarNombre = (valor,campoNombre) => {
     if(valor.trim().length <= 2 || valor.trim().length >= 100) {
         campoNombre.classList.add("is-invalid");
@@ -74,3 +76,14 @@ export const validarDescripcion = (valor,campoDescripcion) => {
     campoDescripcion.classList.add("is-valid")
     return true;
 };
+
+export const validarCategoria = (valor,campoTipo) =>{
+    if(valor.trim().length <= 2 || valor.trim().length >= 100) {
+        campoTipo.classList.remove("is-valid");
+    campoTipo.classList.add("is-invalid");
+        return false;
+    }
+    campoTipo.classList.remove("is-invalid")
+    campoTipo.classList.add("is-valid")
+    return true;
+}
