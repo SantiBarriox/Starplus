@@ -1,6 +1,12 @@
+@font-face {
+  font-family: fuente Avenir;
+  src: url(../assets/Avenir-Disney.rar);
+}
+
 body{
   background-color: #090b13;
 }
+
 section{
     display: flex;
     width: 600px;
@@ -25,10 +31,6 @@ section{
     font-family: fuente Avenir;
     text-align: center;
     margin-top: 2%;
-  }
-  @font-face {
-    font-family: fuente Avenir;
-    src: url(../assets/Avenir-Disney.rar);
   }
 
   .imgLogo {
@@ -83,29 +85,4 @@ section{
 
 .acordeonColor {
     background: #35313f;
-}
-
-@media (max-width:576px){
-    .imgTitulo{
-        display: none;
-        
-       
-    }
-}
-@media (min-width:768px){
-    .imgTitulo{
-        margin-top: 100px;
-        width: 400px;
-       
-    }
-}
-
-
-@media (min-width:1200px){
-    .imgTitulo{
-        margin-top: 100px;
-        margin-left: 40px;
-        width: 500px;
-       
-    }
 }
