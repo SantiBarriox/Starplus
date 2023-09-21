@@ -70,11 +70,7 @@ body{
     ;
 }
     
-
-
-
-
-    
+  
 
 .navbar {
     background-color: #000000;
@@ -95,12 +91,6 @@ strong:hover {
     color:#cdda91;
     text-decoration: none;
 }
-
-#boton-salir {
-  color:#e7d211
-
-}
-
 
 
 .footerLista {
