@@ -1,6 +1,7 @@
 # ⭐ RollingMovies | Grupo N° 3 - Comisión 63i ⭐
-![Star+ Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Star%2B_logo.svg/2560px-Star%2B_logo.svg.png)
 
+![Star+ Logo](https://i.postimg.cc/2SpKDZ53/1366-2000-removebg-preview.png)
+   
    Este proyecto fue creado por el grupo n°3 de la comisión 63i del instituto Rolling Code School, Tucumán.
    Es una aplicación web inspirada en la página oficial de streaming **Star+** que ofrece una plataforma para ver contenido multimedia en línea. Proporciona a los usuarios acceso a una amplia variedad de películas y series de televisión, organizadas por género y categorías. Los usuarios pueden registrarse, iniciar sesión y disfrutar del contenido de forma sencilla y conveniente. 
    También existe la opción de registrarse e iniciar sesión como administrador, para lograr funciones que solo el mismo puede realizar. Como tales, cargar películas o series, editarlas y eliminarlas.
@@ -20,7 +21,7 @@
 Almacenados en la carpeta assets, encontrándose imágenes, gif, archivos svg, etc.
 
 ## Capturas de Pantalla 
-![Página de inicio](screenshots/homepage.png) ![Página de inicio de sesión](screenshots/login.png) ![Página de reproducción](screenshots/playback.png)
+![Página de inicio](https://i.postimg.cc/zXz9b5kk/inicio.png) ![Página de inicio de sesión](https://i.postimg.cc/x1bgqFBR/home.png) ![Página movie](https://i.postimg.cc/BvSNScfZ/movie.png)
 
 ## Librerías utilizadas  
 - HTML, CSS y JavaScript para la interfaz de usuario.
@@ -29,9 +30,6 @@ Almacenados en la carpeta assets, encontrándose imágenes, gif, archivos svg, e
 - Bootstrap.
 
 
-# Demo
-
-Synchronization is one of the biggest features of StackEdit. It enables you to synchronize any file in your 
 
 ## Administrador
 
@@ -41,4 +39,5 @@ Synchronization is one of the biggest features of StackEdit. It enables you to s
 
 ## Diagramas
 
-You can render UML diagrams using [Mermaid](https://mermaidjs.github.io/). For example, this will produce a sequence diagram:
+![Diagrama de flujo](https://i.postimg.cc/NG6yDhrV/diagramadeflujo.png)
+
